@@ -91,6 +91,7 @@ window.LIFTORA_CONFIG = {
             url: "garage-door-repair.html",
             icon: "wrench",
             image: "assets/images/service-repair.jpg",
+            cardImage: "assets/images/service-repair-card.jpg",
             description:
                 "Start a request for a stuck, noisy, uneven, or malfunctioning garage door and compare provider-supplied repair options.",
             metaTitle: "Garage Door Repair Requests | Liftora",
@@ -141,6 +142,7 @@ window.LIFTORA_CONFIG = {
             url: "garage-door-installation.html",
             icon: "door-open",
             image: "assets/images/service-installation.jpg",
+            cardImage: "assets/images/service-installation-card.jpg",
             description:
                 "Start a new garage door installation request and compare provider-supplied details for door style, fit, insulation, and opener compatibility.",
             metaTitle: "Garage Door Installation Requests | Liftora",
@@ -191,6 +193,7 @@ window.LIFTORA_CONFIG = {
             url: "garage-door-replacement.html",
             icon: "replace",
             image: "assets/images/service-replacement.jpg",
+            cardImage: "assets/images/service-replacement-card.jpg",
             description:
                 "Compare garage door replacement options when an older, damaged, inefficient, or outdated door may need a new direction.",
             metaTitle: "Garage Door Replacement Options | Liftora",
@@ -241,6 +244,7 @@ window.LIFTORA_CONFIG = {
             url: "garage-door-opener-services.html",
             icon: "radio-tower",
             image: "assets/images/service-opener.jpg",
+            cardImage: "assets/images/service-opener-card.jpg",
             description:
                 "Start an opener-related request for remote, keypad, motor, sensor, smart opener, chain, or belt-drive concerns.",
             metaTitle: "Garage Door Opener Service Requests | Liftora",
@@ -512,7 +516,7 @@ window.LIFTORA_CONFIG = {
                 title: "Sectional",
                 icon: "panel-top",
                 variant: "black",
-                image: "assets/images/cta-garage-door.jpg",
+                image: "assets/images/service-repair.jpg",
                 alt: "Sectional garage door exterior",
                 imageLabel: "Sectional doors are common and can shape opener, track, roller, panel, and repair conversations.",
                 notes: [

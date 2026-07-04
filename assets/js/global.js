@@ -114,6 +114,12 @@
         return String(value ?? "");
     }
 
+    function resolveAssetUrl(path) {
+        if (!path) return "";
+        if (/^(https?:)?\/\//.test(path) || path.startsWith("/")) return path;
+        return new URL(path, window.location.href).href;
+    }
+
     function getCurrentFileName() {
         const path = window.location.pathname;
         const file = path.substring(path.lastIndexOf("/") + 1);
@@ -455,7 +461,7 @@
                 const card = document.createElement("a");
                 card.className = "service-photo-card";
                 card.href = service.url;
-                card.style.setProperty("--service-image", `url("${service.image}")`);
+                card.style.setProperty("--service-image", `url("${resolveAssetUrl(service.cardImage || service.image)}")`);
 
                 const iconWrap = document.createElement("span");
                 iconWrap.className = "service-photo-card__icon";
@@ -665,7 +671,7 @@
                 const card = document.createElement("a");
                 card.className = "related-card";
                 card.href = service.url;
-                card.style.setProperty("--related-image", `url("${service.image}")`);
+                card.style.setProperty("--related-image", `url("${resolveAssetUrl(service.image)}")`);
 
                 const content = document.createElement("span");
                 content.className = "related-card__content";
@@ -1161,7 +1167,7 @@
                     button.setAttribute("aria-pressed", active ? "true" : "false");
                 });
 
-                imagePanel.style.setProperty("--showcase-image", `url("${service.image}")`);
+                imagePanel.style.setProperty("--showcase-image", `url("${resolveAssetUrl(service.image)}")`);
                 imagePanel.setAttribute("href", service.url);
 
                 const iconWrap = qs("[data-showcase-icon]", imagePanel);
