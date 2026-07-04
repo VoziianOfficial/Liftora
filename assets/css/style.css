@@ -2697,7 +2697,6 @@ h4 {
 
 .is-not-column {
     position: relative;
-    min-height: 470px;
     padding: 34px 38px;
     transition: transform var(--transition), box-shadow var(--transition);
 }
