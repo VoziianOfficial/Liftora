@@ -4328,8 +4328,8 @@ h4 {
 }
 
 .process-card::before {
-    border-color: var(--color-eggplant);
-    box-shadow: 0 0 0 8px rgba(50, 19, 51, .14);
+    border-color: yellowgreen;
+    box-shadow: 0 0 0 8px rgba(0, 255, 0, .14);
 }
 
 .process-card:nth-child(even)::before,
