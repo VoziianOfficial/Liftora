@@ -628,6 +628,13 @@
 
     function renderLineItems(selector, items) {
         qsa(selector).forEach((container) => {
+            if (
+                (selector === "[data-render-request-prep]" || selector === "[data-render-provider-questions]") &&
+                container.querySelector(".line-list__item")
+            ) {
+                return;
+            }
+
             container.innerHTML = "";
 
             (items || []).forEach((item) => {
@@ -648,6 +655,11 @@
     }
 
     function renderQuestionsList(selector) {
+        if (selector === "[data-render-provider-questions]") {
+            const hasStaticItems = qsa(selector).some((container) => container.querySelector(".line-list__item"));
+            if (hasStaticItems) return;
+        }
+
         const questions = [
             "What is included in the quote?",
             "What parts or products are involved?",
