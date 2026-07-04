@@ -9094,3 +9094,70 @@ main>.hero:first-child {
 .hero__content {
     padding-top: 120px;
 }
+
+
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-nav__item {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+.main-nav__service-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    min-height: 44px;
+}
+
+.main-nav__link,
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    line-height: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.main-nav__service-wrap .main-nav__link {
+    padding-right: 7px;
+}
+
+.dropdown-toggle {
+    width: 38px;
+    min-width: 38px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.dropdown-toggle svg,
+.dropdown-toggle i {
+    display: block;
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+}
+
+.main-header__inner {
+    align-items: center;
+}
+
+.site-logo,
+.header-actions {
+    align-self: center;
+}
