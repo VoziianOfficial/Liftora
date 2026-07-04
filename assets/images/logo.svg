@@ -1,48 +1,47 @@
-<svg width="310" height="82" viewBox="0 0 310 82" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="liftoraLogoTitle liftoraLogoDesc">
-  <title id="liftoraLogoTitle">Liftora Logo</title>
-  <desc id="liftoraLogoDesc">Liftora independent garage door matching platform logo with a stylized garage door and upward lift mark.</desc>
+<svg width="360" height="96" viewBox="0 0 360 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="liftoraLogoTitle liftoraLogoDesc">
+  <title id="liftoraLogoTitle">Liftora</title>
+  <desc id="liftoraLogoDesc">Minimal premium garage door matching platform logo.</desc>
 
-  <defs>
-    <clipPath id="garageDoorClip">
-      <rect x="9" y="10" width="58" height="50" rx="9"/>
-    </clipPath>
-  </defs>
+  <g transform="translate(6 10)">
+    <path
+      d="M12 76V33.5L56 4L100 33.5V76H82V47H30V76H12Z"
+      fill="none"
+      stroke="#0E0F12"
+      stroke-width="8"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
 
-  <g class="liftora-logo-mark">
-    <rect x="4" y="5" width="68" height="62" rx="16" fill="#0E0F12"/>
+    <rect x="45" y="28" width="24" height="8" rx="4" fill="#0E0F12"/>
 
-    <g clip-path="url(#garageDoorClip)">
-      <rect x="10" y="12" width="56" height="48" rx="8" fill="#F7F8FA"/>
-
-      <path d="M14 23.5H62" stroke="#0E0F12" stroke-width="3" stroke-linecap="round"/>
-      <path d="M14 34.5H62" stroke="#0E0F12" stroke-width="3" stroke-linecap="round"/>
-      <path d="M14 45.5H62" stroke="#0E0F12" stroke-width="3" stroke-linecap="round"/>
-
-      <path d="M25 16.5H51" stroke="#DDE3EA" stroke-width="2" stroke-linecap="round"/>
-      <path d="M25 27.5H51" stroke="#DDE3EA" stroke-width="2" stroke-linecap="round"/>
-      <path d="M25 38.5H51" stroke="#DDE3EA" stroke-width="2" stroke-linecap="round"/>
-      <path d="M25 49.5H51" stroke="#DDE3EA" stroke-width="2" stroke-linecap="round"/>
-    </g>
-
-    <path d="M38 53V26" stroke="#7ED6FF" stroke-width="4.5" stroke-linecap="round"/>
-    <path d="M28.5 34.5L38 25L47.5 34.5" stroke="#7ED6FF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <path d="M54 16C59.2 18.2 62.7 22.5 63.8 28.1" stroke="#7ED6FF" stroke-width="3.5" stroke-linecap="round"/>
-    <path d="M59.8 13.2C66.8 16.5 71 22.6 71.5 30.4" stroke="#7ED6FF" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
-
-    <rect x="20" y="61" width="36" height="4" rx="2" fill="#7ED6FF"/>
+    <path
+      d="M30 76V48C30 45.7909 31.7909 44 34 44H80C82.2091 44 84 45.7909 84 48V76H73V60H48L32 76H30Z"
+      fill="#0E0F12"
+    />
   </g>
 
-  <g class="liftora-logo-wordmark">
-    <text x="88" y="39" fill="#0E0F12" font-family="Poppins, Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-1.4">
-      Lift<tspan fill="#321333">ora</tspan>
-    </text>
+  <g transform="translate(132 27)">
+    <text
+      x="0"
+      y="31"
+      fill="#0E0F12"
+      font-family="Poppins, Inter, Arial, sans-serif"
+      font-size="36"
+      font-weight="700"
+      letter-spacing="-0.8"
+    >Liftora</text>
 
-    <rect x="89" y="47" width="78" height="4" rx="2" fill="#7ED6FF"/>
-    <rect x="172" y="47" width="34" height="4" rx="2" fill="#321333" opacity=".92"/>
+    <text
+      x="2"
+      y="53"
+      fill="#68717C"
+      font-family="Inter, Arial, sans-serif"
+      font-size="9.5"
+      font-weight="800"
+      letter-spacing="1.7"
+    >GARAGE DOOR MATCHING PLATFORM</text>
 
-    <text x="89" y="65" fill="#68717C" font-family="Inter, Arial, sans-serif" font-size="8.8" font-weight="800" letter-spacing="1.35">
-      INDEPENDENT GARAGE DOOR MATCHING PLATFORM
-    </text>
+    <path d="M2 64H74" stroke="#321333" stroke-width="3" stroke-linecap="round"/>
+    <path d="M83 64H118" stroke="#7ED6FF" stroke-width="3" stroke-linecap="round"/>
   </g>
 </svg>
