@@ -1049,6 +1049,27 @@
                 const text = document.createElement("p");
                 text.textContent = need.text;
 
+                let support = null;
+                if (need.supportText) {
+                    support = document.createElement("p");
+                    support.className = "quick-nav__support";
+                    support.textContent = need.supportText;
+                }
+
+                let detailList = null;
+                if (Array.isArray(need.detailPoints) && need.detailPoints.length) {
+                    detailList = document.createElement("ul");
+                    detailList.className = "quick-nav__detail-list";
+
+                    need.detailPoints.forEach((point) => {
+                        const item = document.createElement("li");
+                        item.className = "quick-nav__detail-item";
+                        item.appendChild(createIcon("check-circle"));
+                        item.appendChild(document.createTextNode(point));
+                        detailList.appendChild(item);
+                    });
+                }
+
                 const actions = document.createElement("div");
                 actions.className = "btn-row";
 
@@ -1070,7 +1091,17 @@
                     meta.appendChild(span);
                 });
 
-                panel.append(iconWrap, title, text, actions, meta);
+                panel.append(iconWrap, title, text);
+
+                if (support) {
+                    panel.appendChild(support);
+                }
+
+                if (detailList) {
+                    panel.appendChild(detailList);
+                }
+
+                panel.append(actions, meta);
                 refreshIcons();
             }
 

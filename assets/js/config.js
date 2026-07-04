@@ -391,6 +391,13 @@ window.LIFTORA_CONFIG = {
             icon: "door-open",
             text:
                 "Start with the movement issue, when it began, and whether the opener responds. Liftora helps organize the request before provider comparison.",
+            supportText:
+                "Include whether the door is fully stuck, opens only partway, reverses unexpectedly, or makes noise when the opener is activated. Clear symptom detail helps providers understand the starting point faster.",
+            detailPoints: [
+                "Note whether wall control, remote, or keypad responds",
+                "Mention unusual sounds, resistance, or one-sided movement",
+                "Share timing preferences and whether access is urgent"
+            ],
             cta: "Start Repair Request",
             url: "garage-door-repair.html"
         },
@@ -399,6 +406,13 @@ window.LIFTORA_CONFIG = {
             icon: "rotate-cw",
             text:
                 "Spring and cable concerns can involve tension systems. Describe visible symptoms and continue through qualified provider evaluation.",
+            supportText:
+                "If a spring looks separated, a cable appears loose, or the door suddenly feels very heavy, describe only what you can safely observe. Liftora keeps the request structured without suggesting DIY tension-part handling.",
+            detailPoints: [
+                "Mention if you heard a loud snap before the issue started",
+                "Describe whether the door opens a few inches and stops",
+                "Add visible cable, spring, or balance symptoms if present"
+            ],
             cta: "View Spring & Cable Requests",
             url: "spring-cable-repair.html"
         },
@@ -407,6 +421,13 @@ window.LIFTORA_CONFIG = {
             icon: "activity",
             text:
                 "Noises, shaking, scraping, or uneven movement can help providers understand what may need evaluation.",
+            supportText:
+                "This type of request is most useful when you describe where the sound happens, whether the motion feels rough or unstable, and if the issue changes while opening versus closing.",
+            detailPoints: [
+                "Describe grinding, scraping, rattling, or vibration",
+                "Mention if shaking happens near the floor, midway, or near the top",
+                "Include whether the issue is occasional or every cycle"
+            ],
             cta: "Compare Repair Options",
             url: "garage-door-repair.html"
         },
@@ -415,6 +436,13 @@ window.LIFTORA_CONFIG = {
             icon: "panel-top",
             text:
                 "Dents, gaps, bent areas, and visible panel damage can be included in your request details.",
+            supportText:
+                "Panel and track-related requests are easier to compare when they include visible damage notes, alignment changes, and whether the door still moves normally or rubs while traveling.",
+            detailPoints: [
+                "Mention dents, cracks, gaps, bent areas, or loose sections",
+                "Describe scraping, rubbing, or visible misalignment",
+                "Add whether you are comparing repair and replacement possibilities"
+            ],
             cta: "View Track & Panel Requests",
             url: "track-roller-panel-repair.html"
         },
@@ -423,6 +451,13 @@ window.LIFTORA_CONFIG = {
             icon: "radio-tower",
             text:
                 "Remote, keypad, motor, sensor, or smart opener behavior can be described before comparing provider-supplied options.",
+            supportText:
+                "Opener-related requests often involve one of several separate issues, so it helps to say whether the problem is with controls, motor response, sensors, or smart features rather than only saying the opener is not working.",
+            detailPoints: [
+                "Note if lights blink, motor hums, or sensors appear blocked",
+                "Mention remote, keypad, wall switch, or app behavior",
+                "Include opener brand or model if it is visible"
+            ],
             cta: "View Opener Services",
             url: "garage-door-opener-services.html"
         },
@@ -431,6 +466,13 @@ window.LIFTORA_CONFIG = {
             icon: "badge-plus",
             text:
                 "For a new door or replacement, include style, insulation, material, and opener compatibility preferences.",
+            supportText:
+                "Planning requests are stronger when they describe the result you want, such as improved insulation, cleaner curb appeal, quieter operation, or compatibility with a new opener setup.",
+            detailPoints: [
+                "Share style, color, window, or material preferences",
+                "Mention insulation goals or climate-related needs",
+                "Add whether this is a fresh installation or a replacement decision"
+            ],
             cta: "Start Installation Request",
             url: "garage-door-installation.html"
         }
