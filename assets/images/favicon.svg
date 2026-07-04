@@ -2,19 +2,19 @@
   <title id="liftoraFaviconTitle">Liftora Favicon</title>
   <desc id="liftoraFaviconDesc">Liftora favicon with stylized garage door panels and upward lift arrow.</desc>
 
-  <rect x="4" y="4" width="56" height="56" rx="15" fill="#101214"/>
+  <rect x="4" y="4" width="56" height="56" rx="15" fill="#0E0F12"/>
 
-  <rect x="14" y="14" width="36" height="34" rx="7" fill="#F5F1EA"/>
+  <rect x="14" y="14" width="36" height="34" rx="7" fill="#F7F8FA"/>
 
-  <path d="M18 24H46" stroke="#101214" stroke-width="3.2" stroke-linecap="round"/>
-  <path d="M18 32H46" stroke="#101214" stroke-width="3.2" stroke-linecap="round"/>
-  <path d="M18 40H46" stroke="#101214" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M18 24H46" stroke="#0E0F12" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M18 32H46" stroke="#0E0F12" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M18 40H46" stroke="#0E0F12" stroke-width="3.2" stroke-linecap="round"/>
 
-  <path d="M32 44V21" stroke="#F47A1F" stroke-width="4.2" stroke-linecap="round"/>
-  <path d="M24.5 28.5L32 21L39.5 28.5" stroke="#F47A1F" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 44V21" stroke="#7ED6FF" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M24.5 28.5L32 21L39.5 28.5" stroke="#7ED6FF" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <path d="M42 15.5C46 17.2 48.6 20.6 49.4 24.8" stroke="#F47A1F" stroke-width="3" stroke-linecap="round"/>
-  <path d="M46.5 12.8C52 15.4 55 20 55.4 25.5" stroke="#F47A1F" stroke-width="2.2" stroke-linecap="round" opacity=".68"/>
+  <path d="M42 15.5C46 17.2 48.6 20.6 49.4 24.8" stroke="#7ED6FF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M46.5 12.8C52 15.4 55 20 55.4 25.5" stroke="#7ED6FF" stroke-width="2.2" stroke-linecap="round" opacity=".68"/>
 
-  <rect x="22" y="50" width="20" height="3.5" rx="1.75" fill="#F47A1F"/>
+  <rect x="22" y="50" width="20" height="3.5" rx="1.75" fill="#7ED6FF"/>
 </svg>

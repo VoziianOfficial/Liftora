@@ -275,7 +275,7 @@
         right: auto;
         width: 2px;
         height: auto;
-        background: linear-gradient(180deg, var(--color-orange), rgba(244, 122, 31, .16));
+        background: rgba(126, 214, 255, .42);
     }
 
     .journey-step {

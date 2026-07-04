@@ -491,6 +491,97 @@ main>.legal-section {
 }
 
 /* ==========================================================================
+   Premium palette refresh
+   ========================================================================== */
+
+.legal-hero::after {
+    background: linear-gradient(90deg, rgba(14, 15, 18, .82), rgba(14, 15, 18, .44) 56%, rgba(14, 15, 18, .82));
+}
+
+.legal-hero .kicker {
+    color: var(--color-sky);
+}
+
+.legal-meta>span {
+    border-color: rgba(126, 214, 255, .16);
+    background: rgba(255, 255, 255, .06);
+}
+
+.legal-meta svg,
+.legal-contact-list svg,
+.legal-note svg,
+.legal-mini-card svg {
+    color: var(--color-sky);
+}
+
+.legal-sidebar {
+    border-color: rgba(221, 227, 234, .92);
+    box-shadow: 0 16px 34px rgba(14, 15, 18, .06);
+}
+
+.legal-toc a::before {
+    background: var(--color-eggplant);
+}
+
+.legal-toc a:hover {
+    background: var(--color-sky-soft);
+    color: var(--color-black);
+}
+
+.legal-content,
+.legal-mini-card,
+.legal-table-wrap {
+    border-color: rgba(221, 227, 234, .92);
+    box-shadow: 0 16px 34px rgba(14, 15, 18, .06);
+}
+
+.legal-card a {
+    text-decoration-color: rgba(126, 214, 255, .44);
+}
+
+.legal-card a:hover {
+    color: var(--color-sky-deep);
+}
+
+.legal-card li::before {
+    background: var(--color-eggplant);
+}
+
+.legal-card--notice {
+    background: var(--color-eggplant-deep);
+}
+
+.legal-card--notice::before {
+    background: var(--color-sky);
+}
+
+.legal-contact-list a,
+.legal-contact-list>span,
+.legal-note {
+    border-color: rgba(221, 227, 234, .92);
+    background: var(--color-offwhite);
+}
+
+.legal-contact-list a:hover {
+    border-color: rgba(126, 214, 255, .36);
+    background: var(--color-sky-soft);
+    color: var(--color-black);
+}
+
+.legal-note {
+    border-color: rgba(126, 214, 255, .24);
+    background: rgba(126, 214, 255, .10);
+}
+
+.legal-mini-card:nth-child(even) svg {
+    color: var(--color-eggplant);
+}
+
+.legal-table th {
+    background: var(--color-black);
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 
