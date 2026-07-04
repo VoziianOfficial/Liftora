@@ -4633,19 +4633,7 @@ h4 {
     pointer-events: none;
 }
 
-/* Subtle premium grid over photo */
-.request-runway::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
-    background-size: 72px 72px;
-    opacity: .28;
-    pointer-events: none;
-}
+
 
 .request-runway::after {
     content: "LIFTORA";
