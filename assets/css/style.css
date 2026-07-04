@@ -2234,7 +2234,8 @@ h4 {
 
 .platform-clarity__grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr);
+    width: 100%;
     overflow: hidden;
     border: 1px solid rgba(16, 18, 20, .10);
     border-radius: 30px;
@@ -2244,7 +2245,7 @@ h4 {
 .platform-panel {
     position: relative;
     min-height: 430px;
-    padding: 38px;
+    padding: 46px 44px;
 }
 
 .platform-panel--dark {
@@ -2282,14 +2283,14 @@ h4 {
 }
 
 .platform-panel h2 {
-    max-width: 460px;
+    max-width: 540px;
     padding-top: 36px;
     margin-bottom: 18px;
     font-size: 38px;
 }
 
 .platform-panel p {
-    max-width: 520px;
+    max-width: 600px;
 }
 
 .platform-panel--dark p {
@@ -2299,6 +2300,7 @@ h4 {
 .platform-points {
     display: grid;
     gap: 13px;
+    max-width: 600px;
     margin-top: 26px;
 }
 

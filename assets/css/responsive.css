@@ -1311,3 +1311,68 @@
         background: rgba(0, 0, 0, .68);
     }
 }
+
+@media (max-width: 1180px) {
+    .door-types-showcase__cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .door-type-tile {
+        min-height: 108px;
+    }
+}
+
+@media (max-width: 768px) {
+    .door-types-showcase__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .door-types-showcase__photo {
+        height: 280px;
+        border-radius: 24px;
+    }
+
+    .door-types-showcase__notes {
+        grid-template-columns: 1fr;
+    }
+
+    .door-types-note {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 520px) {
+    .door-types-showcase__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .door-type-tile {
+        min-height: 96px;
+    }
+
+    .door-types-showcase__photo {
+        height: 230px;
+        border-radius: 20px;
+    }
+
+    .door-types-showcase__photo-label {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .door-types-note {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 24px 0;
+    }
+
+    .door-types-note svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .door-types-note h3 {
+        font-size: 20px;
+    }
+}
