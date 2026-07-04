@@ -4374,6 +4374,58 @@ h4 {
     background: rgba(255, 255, 255, .07);
 }
 
+.section-dark .clean-card:hover,
+.section-dark .process-card:hover,
+.section-dark .dark-card:hover,
+.section-dark .provider-evaluate:hover,
+.section-dark .line-list__item:hover {
+    transform: none;
+}
+
+.section-dark .clean-card:hover,
+.section-dark .dark-card:hover {
+    background: rgba(255, 255, 255, .04);
+    border-color: rgba(126, 214, 255, .46);
+    box-shadow: 0 16px 34px rgba(14, 15, 18, .10);
+}
+
+.section-dark .clean-card:hover::after,
+.section-dark .dark-card:hover::after {
+    transform: scaleX(.18);
+    opacity: .65;
+}
+
+.section-dark .process-card:hover {
+    background: rgba(255, 255, 255, .04);
+    border-color: rgba(126, 214, 255, .46);
+    box-shadow: 0 16px 34px rgba(14, 15, 18, .10);
+}
+
+.section-dark .provider-evaluate {
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+.section-dark .provider-evaluate:hover {
+    border-color: rgba(126, 214, 255, .34);
+    box-shadow: 0 16px 34px rgba(14, 15, 18, .10);
+}
+
+.section-dark .line-list__item {
+    transition:
+        border-color var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+}
+
+.section-dark .line-list__item:hover {
+    border-color: rgba(126, 214, 255, .34);
+    background: transparent;
+    box-shadow: none;
+}
+
 .journey-step::before {
     border-color: var(--color-eggplant);
     box-shadow: 0 0 0 8px rgba(50, 19, 51, .10);
