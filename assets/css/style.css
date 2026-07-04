@@ -2325,15 +2325,15 @@ h4 {
 
 .faq-layout {
     display: grid;
-    grid-template-columns: minmax(300px, .86fr) minmax(0, 1.14fr);
-    gap: 44px;
-    align-items: center;
+    grid-template-columns: minmax(380px, .98fr) minmax(0, 1.18fr);
+    gap: 56px;
+    align-items: stretch;
 }
 
 .faq-photo {
     position: relative;
     overflow: hidden;
-    min-height: 520px;
+    min-height: 560px;
     border-radius: 28px;
     background: var(--color-steel);
     box-shadow: var(--shadow-soft);
@@ -2342,7 +2342,7 @@ h4 {
 .faq-photo img {
     width: 100%;
     height: 100%;
-    min-height: 520px;
+    min-height: 560px;
     object-fit: cover;
 }
 
@@ -2364,6 +2364,12 @@ h4 {
     background: rgba(16, 18, 20, .78);
     color: var(--color-white);
     backdrop-filter: blur(12px);
+}
+
+.faq-layout > [data-animate="fade-left"] {
+    display: grid;
+    align-content: center;
+    max-width: none;
 }
 
 .faq-photo__badge strong {
