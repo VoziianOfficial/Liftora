@@ -2687,16 +2687,62 @@ h4 {
 }
 
 .is-not-grid {
+    position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr);
     overflow: hidden;
     border-radius: 30px;
     box-shadow: var(--shadow-soft);
 }
 
 .is-not-column {
+    position: relative;
     min-height: 470px;
-    padding: 38px;
+    padding: 34px 38px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.is-not-column::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, transparent 0%, rgba(126, 214, 255, .18) 48%, transparent 100%);
+    background-size: 220% 100%;
+    background-position: 120% 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition), background-position 560ms var(--ease);
+}
+
+.is-not-column::after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+    height: 3px;
+    border-radius: 999px 999px 0 0;
+    background: linear-gradient(90deg, var(--color-eggplant), var(--color-sky));
+    transform: scaleX(.18);
+    transform-origin: left;
+    opacity: .72;
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+.is-not-column:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 52px rgba(16, 18, 20, .12);
+}
+
+.is-not-column:hover::before {
+    opacity: 1;
+    background-position: -20% 0;
+}
+
+.is-not-column:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
 }
 
 .is-not-column--dark {
