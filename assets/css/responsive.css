@@ -2574,3 +2574,46 @@
         border-radius: 18px;
     }
 }
+@media (max-width: 992px) {
+    .site-header {
+        background: transparent;
+    }
+
+    .main-header__inner {
+        background: rgba(255, 255, 255, .92);
+        border-color: rgba(16, 18, 20, .10);
+    }
+
+    main>.hero:first-child {
+        padding-top: calc(var(--preheader-height) + 92px);
+    }
+
+    .hero {
+        min-height: 700px;
+    }
+
+    .hero--about,
+    .hero--services,
+    .hero--contact {
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 560px) {
+    .pre-header {
+        display: none;
+    }
+
+    main>.hero:first-child {
+        padding-top: 96px;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .inner-hero__content,
+    .hero__content {
+        padding-top: 100px;
+    }
+}
