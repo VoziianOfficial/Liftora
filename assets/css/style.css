@@ -5699,3 +5699,259 @@ h4 {
 .request-clarity-split__line div:hover svg {
     transform: translateY(-3px);
 }
+
+
+/* ==========================================================================
+   Request Orbit Journey
+   ========================================================================== */
+
+.request-orbit {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.request-orbit::before {
+    content: "JOURNEY";
+    position: absolute;
+    right: -28px;
+    top: 36px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(14, 15, 18, .055);
+    font-family: var(--font-heading);
+    font-size: clamp(86px, 13vw, 190px);
+    font-weight: 900;
+    letter-spacing: -.09em;
+    line-height: .78;
+    pointer-events: none;
+}
+
+.request-orbit__head {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .46fr);
+    gap: 42px;
+    align-items: end;
+    margin-bottom: 54px;
+}
+
+.request-orbit__head h2 {
+    max-width: 760px;
+}
+
+.request-orbit__head>p {
+    max-width: 560px;
+    color: var(--color-muted);
+    font-size: 17px;
+    line-height: 1.72;
+}
+
+.request-orbit__stage {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-height: 330px;
+}
+
+.request-orbit__stage::before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 50%;
+    height: 2px;
+    background:
+        repeating-linear-gradient(90deg,
+            rgba(14, 15, 18, .18) 0 12px,
+            transparent 12px 24px);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.request-orbit__stage::after {
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 34%;
+    height: 2px;
+    background: var(--color-sky);
+    box-shadow: 0 0 22px rgba(126, 214, 255, .55);
+    transform: translateY(-50%);
+    animation: requestOrbitLine 5.6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.request-orbit-card {
+    --orbit-size: 214px;
+    --orbit-bg: var(--color-white);
+    --orbit-color: var(--color-black);
+    --orbit-icon: var(--color-eggplant);
+    --orbit-border: rgba(14, 15, 18, .12);
+
+    position: relative;
+    z-index: 2;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 9px;
+    width: var(--orbit-size);
+    height: var(--orbit-size);
+    padding: 26px;
+    border: 1px solid var(--orbit-border);
+    border-radius: 999px;
+    background: var(--orbit-bg);
+    color: var(--orbit-color);
+    text-align: center;
+    box-shadow:
+        0 16px 0 rgba(14, 15, 18, .055),
+        0 26px 60px rgba(14, 15, 18, .10);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.request-orbit-card::before {
+    content: "";
+    position: absolute;
+    inset: -9px;
+    border: 1px solid rgba(14, 15, 18, .08);
+    border-radius: inherit;
+    opacity: .85;
+    transform: scale(.92);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        opacity var(--transition);
+}
+
+.request-orbit-card::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .20), transparent 52%);
+    pointer-events: none;
+}
+
+.request-orbit-card:hover {
+    transform: translateY(-10px) rotate(-1.5deg);
+    box-shadow:
+        0 20px 0 rgba(14, 15, 18, .075),
+        0 34px 78px rgba(14, 15, 18, .16);
+}
+
+.request-orbit-card:hover::before {
+    transform: scale(1);
+    border-color: rgba(126, 214, 255, .52);
+    opacity: 1;
+}
+
+.request-orbit-card__number {
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%);
+    color: currentColor;
+    opacity: .58;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .15em;
+}
+
+.request-orbit-card svg {
+    width: 34px;
+    height: 34px;
+    color: var(--orbit-icon);
+    stroke-width: 2;
+    transition: transform var(--transition);
+}
+
+.request-orbit-card:hover svg {
+    transform: translateY(-4px) scale(1.06);
+}
+
+.request-orbit-card h3 {
+    max-width: 140px;
+    font-size: 20px;
+    line-height: 1.04;
+    letter-spacing: -.045em;
+}
+
+.request-orbit-card p {
+    max-width: 150px;
+    color: currentColor;
+    opacity: .70;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.request-orbit-card--black {
+    --orbit-size: 222px;
+    --orbit-bg: var(--color-black);
+    --orbit-color: var(--color-white);
+    --orbit-icon: var(--color-sky);
+    --orbit-border: rgba(255, 255, 255, .16);
+    margin-top: 38px;
+}
+
+.request-orbit-card--sky {
+    --orbit-size: 188px;
+    --orbit-bg: var(--color-sky);
+    --orbit-color: var(--color-black);
+    --orbit-icon: var(--color-eggplant);
+    --orbit-border: rgba(14, 15, 18, .14);
+    margin-bottom: 74px;
+}
+
+.request-orbit-card--eggplant {
+    --orbit-size: 238px;
+    --orbit-bg: var(--color-eggplant);
+    --orbit-color: var(--color-white);
+    --orbit-icon: var(--color-sky);
+    --orbit-border: rgba(255, 255, 255, .16);
+}
+
+.request-orbit-card--soft {
+    --orbit-size: 196px;
+    --orbit-bg: var(--color-offwhite);
+    --orbit-color: var(--color-black);
+    --orbit-icon: var(--color-sky-deep);
+    --orbit-border: rgba(14, 15, 18, .10);
+    margin-top: 70px;
+}
+
+.request-orbit-card--outline {
+    --orbit-size: 218px;
+    --orbit-bg: var(--color-white);
+    --orbit-color: var(--color-black);
+    --orbit-icon: var(--color-eggplant);
+    --orbit-border: rgba(50, 19, 51, .25);
+    margin-bottom: 44px;
+}
+
+.request-orbit-card--outline::before {
+    border-color: rgba(50, 19, 51, .18);
+}
+
+@keyframes requestOrbitLine {
+
+    0%,
+    100% {
+        width: 18%;
+        opacity: .55;
+    }
+
+    50% {
+        width: 90%;
+        opacity: 1;
+    }
+}

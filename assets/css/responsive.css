@@ -1506,3 +1506,80 @@
         right: 0;
     }
 }
+
+@media (max-width: 1180px) {
+    .request-orbit__stage {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-items: center;
+        gap: 26px 18px;
+        min-height: auto;
+    }
+
+    .request-orbit__stage::before,
+    .request-orbit__stage::after {
+        display: none;
+    }
+
+    .request-orbit-card,
+    .request-orbit-card--black,
+    .request-orbit-card--sky,
+    .request-orbit-card--eggplant,
+    .request-orbit-card--soft,
+    .request-orbit-card--outline {
+        margin: 0;
+        --orbit-size: 210px;
+    }
+}
+
+@media (max-width: 992px) {
+    .request-orbit__head {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 38px;
+    }
+
+    .request-orbit__head>p {
+        max-width: 760px;
+    }
+}
+
+@media (max-width: 768px) {
+    .request-orbit__stage {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .request-orbit-card,
+    .request-orbit-card--black,
+    .request-orbit-card--sky,
+    .request-orbit-card--eggplant,
+    .request-orbit-card--soft,
+    .request-orbit-card--outline {
+        --orbit-size: min(42vw, 190px);
+        padding: 22px;
+    }
+
+    .request-orbit-card h3 {
+        font-size: 18px;
+    }
+
+    .request-orbit-card p {
+        font-size: 11.5px;
+    }
+}
+
+@media (max-width: 520px) {
+    .request-orbit__stage {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .request-orbit-card,
+    .request-orbit-card--black,
+    .request-orbit-card--sky,
+    .request-orbit-card--eggplant,
+    .request-orbit-card--soft,
+    .request-orbit-card--outline {
+        --orbit-size: 230px;
+    }
+}
