@@ -11,7 +11,7 @@ window.LIFTORA_CONFIG = {
     },
 
     contact: {
-        phone: "+1 (000) 000-0000",
+        phone: "+1 (786) 543-1234",
         phoneText: "Call Platform",
         email: "support@liftora.com",
         address: "Platform Address Here",

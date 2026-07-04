@@ -271,6 +271,7 @@
             updatePhoneLinks(phoneHref, phone);
             updateEmailLinks(emailHref, email);
             updateLogoLabels(brandName);
+            restoreFormPhonePlaceholders();
             updateContactFormEmail(email);
             updateFooterYearAndCopyright(brandName);
 
@@ -458,6 +459,16 @@
                 form.querySelectorAll('input[name="recipient"], input[name="to"], input[name="email_to"]').forEach((input) => {
                     input.value = email;
                 });
+            });
+        }
+
+        function restoreFormPhonePlaceholders() {
+            document.querySelectorAll('input[type="tel"][placeholder]').forEach((input) => {
+                const currentPlaceholder = input.getAttribute("placeholder") || "";
+
+                if (shouldReplaceContactText(currentPlaceholder)) {
+                    input.setAttribute("placeholder", "+1 (000) 000-0000");
+                }
             });
         }
 
