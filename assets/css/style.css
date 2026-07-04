@@ -6613,3 +6613,262 @@ h4 {
     --puzzle-color: var(--color-white);
     --puzzle-accent: var(--color-sky);
 }
+
+/* ==========================================================================
+   Before / After Request View
+   ========================================================================== */
+
+.before-after-doors {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.before-after-doors::before {
+    content: "BEFORE / AFTER";
+    position: absolute;
+    left: -26px;
+    top: 38px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(14, 15, 18, .055);
+    font-family: var(--font-heading);
+    font-size: clamp(68px, 10vw, 165px);
+    font-weight: 900;
+    letter-spacing: -.085em;
+    line-height: .82;
+    pointer-events: none;
+}
+
+.before-after-doors__head {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, .42fr);
+    gap: 42px;
+    align-items: end;
+    margin-bottom: 38px;
+}
+
+.before-after-doors__head h2 {
+    max-width: 900px;
+    font-size: clamp(34px, 4vw, 62px);
+    line-height: .98;
+    letter-spacing: -.07em;
+}
+
+.before-after-doors__head>p {
+    max-width: 520px;
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.72;
+}
+
+.before-after-doors__grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+.before-after-door {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    min-height: 480px;
+    border-radius: 34px;
+    background: var(--color-black);
+    color: var(--color-white);
+    box-shadow: 0 26px 70px rgba(14, 15, 18, .15);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.before-after-door::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 24px;
+    opacity: .8;
+    pointer-events: none;
+    transition:
+        inset var(--transition),
+        border-color var(--transition),
+        opacity var(--transition);
+}
+
+.before-after-door::after {
+    content: "";
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    z-index: 4;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--color-sky);
+    transform: scaleX(.22);
+    transform-origin: left;
+    transition: transform var(--transition), background var(--transition);
+}
+
+.before-after-door--after::after {
+    background: var(--color-eggplant);
+}
+
+.before-after-door img {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.035);
+    transition:
+        transform 900ms var(--ease),
+        filter 900ms var(--ease);
+}
+
+.before-after-door__shade {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .68)),
+        linear-gradient(90deg, rgba(0, 0, 0, .54), rgba(0, 0, 0, .10) 62%);
+    pointer-events: none;
+    transition: background var(--transition);
+}
+
+.before-after-door--after .before-after-door__shade {
+    background:
+        linear-gradient(rgba(0, 0, 0, .06), rgba(0, 0, 0, .58)),
+        linear-gradient(90deg, rgba(50, 19, 51, .58), rgba(0, 0, 0, .12) 66%);
+}
+
+.before-after-door__content {
+    position: absolute;
+    left: 34px;
+    right: 34px;
+    bottom: 44px;
+    z-index: 5;
+    max-width: 520px;
+}
+
+.before-after-door__content span {
+    display: inline-flex;
+    margin-bottom: 14px;
+    color: var(--color-sky);
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .16em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.before-after-door--after .before-after-door__content span {
+    color: var(--color-white);
+}
+
+.before-after-door__content h3 {
+    max-width: 560px;
+    color: var(--color-white);
+    font-size: clamp(28px, 3.3vw, 52px);
+    line-height: .98;
+    letter-spacing: -.07em;
+    text-shadow: 0 18px 38px rgba(0, 0, 0, .42);
+}
+
+.before-after-door__content p {
+    max-width: 500px;
+    margin-top: 16px;
+    color: rgba(255, 255, 255, .74);
+    font-size: 15px;
+    line-height: 1.62;
+    transform: translateY(12px);
+    opacity: .76;
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+.before-after-door__corner {
+    position: absolute;
+    right: 34px;
+    top: 34px;
+    z-index: 5;
+    width: 68px;
+    height: 68px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .24);
+    border-radius: 999px;
+    background: rgba(14, 15, 18, .34);
+    backdrop-filter: blur(14px);
+    color: var(--color-sky);
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+.before-after-door--after .before-after-door__corner {
+    color: var(--color-white);
+    background: rgba(50, 19, 51, .46);
+}
+
+.before-after-door__corner svg {
+    width: 29px;
+    height: 29px;
+    stroke-width: 1.9;
+}
+
+.before-after-door:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 36px 88px rgba(14, 15, 18, .20);
+}
+
+.before-after-door:hover::before {
+    inset: 24px;
+    border-color: rgba(126, 214, 255, .50);
+    opacity: 1;
+}
+
+.before-after-door--after:hover::before {
+    border-color: rgba(255, 255, 255, .44);
+}
+
+.before-after-door:hover::after {
+    transform: scaleX(1);
+}
+
+.before-after-door:hover img {
+    transform: scale(1.095);
+    filter: saturate(1.08) contrast(1.04);
+}
+
+.before-after-door:hover .before-after-door__content p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.before-after-door:hover .before-after-door__corner {
+    transform: translateY(-5px) rotate(-6deg);
+    background: var(--color-sky);
+    color: var(--color-black);
+    border-color: var(--color-sky);
+}
+
+.before-after-door--after:hover .before-after-door__corner {
+    background: var(--color-white);
+    color: var(--color-eggplant);
+    border-color: var(--color-white);
+}
