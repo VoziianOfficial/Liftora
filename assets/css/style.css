@@ -2851,8 +2851,8 @@ h4 {
 
 .tab-panel__icon {
     position: absolute;
-    top: 28px;
-    right: 30px;
+    top: 21px;
+    right: 20px;
     color: var(--color-orange);
 }
 
