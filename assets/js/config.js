@@ -90,7 +90,7 @@ window.LIFTORA_CONFIG = {
             shortTitle: "Repair",
             url: "garage-door-repair.html",
             icon: "wrench",
-            image: "assets/images/service-repair.jpg",
+            image: "assets/images/card-5.jpg",
             cardImage: "assets/images/service-repair-card.jpg",
             description:
                 "Start a request for a stuck, noisy, uneven, or malfunctioning garage door and compare provider-supplied repair options.",
@@ -141,7 +141,7 @@ window.LIFTORA_CONFIG = {
             shortTitle: "Installation",
             url: "garage-door-installation.html",
             icon: "door-open",
-            image: "assets/images/service-installation.jpg",
+            image: "assets/images/card-6.jpg",
             cardImage: "assets/images/service-installation-card.jpg",
             description:
                 "Start a new garage door installation request and compare provider-supplied details for door style, fit, insulation, and opener compatibility.",
@@ -192,7 +192,7 @@ window.LIFTORA_CONFIG = {
             shortTitle: "Replacement",
             url: "garage-door-replacement.html",
             icon: "replace",
-            image: "assets/images/service-replacement.jpg",
+            image: "assets/images/card-7.jpg",
             cardImage: "assets/images/service-replacement-card.jpg",
             description:
                 "Compare garage door replacement options when an older, damaged, inefficient, or outdated door may need a new direction.",
@@ -243,7 +243,7 @@ window.LIFTORA_CONFIG = {
             shortTitle: "Openers",
             url: "garage-door-opener-services.html",
             icon: "radio-tower",
-            image: "assets/images/service-opener.jpg",
+            image: "assets/images/card-4.jpg",
             cardImage: "assets/images/service-opener-card.jpg",
             description:
                 "Start an opener-related request for remote, keypad, motor, sensor, smart opener, chain, or belt-drive concerns.",
@@ -294,7 +294,7 @@ window.LIFTORA_CONFIG = {
             shortTitle: "Springs/Cables",
             url: "spring-cable-repair.html",
             icon: "rotate-cw",
-            image: "assets/images/service-springs.jpg",
+            image: "assets/images/card-3.jpg",
             description:
                 "Start a spring or cable-related request for heavy doors, loose cables, broken springs, uneven movement, or tension-system concerns.",
             metaTitle: "Spring & Cable Garage Door Requests | Liftora",
