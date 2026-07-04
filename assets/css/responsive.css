@@ -1639,3 +1639,83 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 1180px) {
+    .garage-request-puzzle__grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .garage-puzzle-card,
+    .garage-puzzle-card--intro,
+    .garage-puzzle-card--repair,
+    .garage-puzzle-card--opener,
+    .garage-puzzle-card--spring,
+    .garage-puzzle-card--replacement-photo,
+    .garage-puzzle-card--compare {
+        grid-row: auto;
+        min-height: 190px;
+    }
+
+    .garage-puzzle-card--intro,
+    .garage-puzzle-card--repair,
+    .garage-puzzle-card--compare {
+        grid-column: span 3;
+    }
+
+    .garage-puzzle-card--opener,
+    .garage-puzzle-card--spring,
+    .garage-puzzle-card--replacement-photo {
+        grid-column: span 2;
+    }
+
+    .garage-puzzle-card--repair,
+    .garage-puzzle-card--replacement-photo {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .garage-request-puzzle__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .garage-puzzle-card,
+    .garage-puzzle-card--intro,
+    .garage-puzzle-card--repair,
+    .garage-puzzle-card--opener,
+    .garage-puzzle-card--spring,
+    .garage-puzzle-card--replacement-photo,
+    .garage-puzzle-card--compare {
+        grid-column: 1;
+        min-height: 170px;
+    }
+
+    .garage-puzzle-card--repair,
+    .garage-puzzle-card--replacement-photo {
+        min-height: 260px;
+    }
+}
+
+@media (max-width: 520px) {
+    .garage-puzzle-card {
+        border-radius: 22px;
+        padding: 20px;
+    }
+
+    .garage-puzzle-card--photo {
+        padding: 0;
+    }
+
+    .garage-puzzle-card--photo>div {
+        padding: 20px;
+    }
+
+    .garage-puzzle-card h2 {
+        font-size: 31px;
+    }
+
+    .garage-puzzle-card h3 {
+        font-size: 21px;
+    }
+}

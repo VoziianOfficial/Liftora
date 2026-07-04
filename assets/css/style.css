@@ -6347,3 +6347,269 @@ h4 {
     color: var(--switch-accent);
     transform: translateY(-2px);
 }
+
+/* ==========================================================================
+   Garage Request Puzzle
+   ========================================================================== */
+
+.garage-request-puzzle {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.garage-request-puzzle::before {
+    content: "REQUEST";
+    position: absolute;
+    right: -18px;
+    top: 34px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(14, 15, 18, .055);
+    font-family: var(--font-heading);
+    font-size: clamp(88px, 13vw, 210px);
+    font-weight: 900;
+    letter-spacing: -.09em;
+    line-height: .8;
+    pointer-events: none;
+}
+
+.garage-request-puzzle__grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(3, 156px);
+    gap: 14px;
+    width: 100%;
+}
+
+.garage-puzzle-card {
+    --puzzle-bg: var(--color-offwhite);
+    --puzzle-color: var(--color-black);
+    --puzzle-accent: var(--color-sky);
+
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    align-content: end;
+    min-width: 0;
+    min-height: 0;
+    padding: 22px;
+    border: 2px solid rgba(14, 15, 18, .08);
+    border-radius: 26px;
+    background: var(--puzzle-bg);
+    color: var(--puzzle-color);
+    box-shadow: 0 16px 42px rgba(14, 15, 18, .075);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.garage-puzzle-card::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    z-index: 1;
+    width: 58px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--puzzle-accent);
+    transition: width var(--transition);
+}
+
+.garage-puzzle-card::after {
+    content: "";
+    position: absolute;
+    right: -34px;
+    bottom: -34px;
+    width: 112px;
+    height: 112px;
+    border: 2px solid var(--puzzle-accent);
+    border-radius: 999px;
+    opacity: .15;
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+.garage-puzzle-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--puzzle-accent);
+    box-shadow: 0 28px 72px rgba(14, 15, 18, .14);
+}
+
+.garage-puzzle-card:hover::before {
+    width: calc(100% - 36px);
+}
+
+.garage-puzzle-card:hover::after {
+    transform: scale(1.3) rotate(14deg);
+    opacity: .3;
+}
+
+.garage-puzzle-card span,
+.garage-puzzle-card .section-kicker {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-bottom: 8px;
+    color: currentColor;
+    opacity: .68;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .13em;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.garage-puzzle-card h2,
+.garage-puzzle-card h3,
+.garage-puzzle-card p {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+}
+
+.garage-puzzle-card h2 {
+    max-width: 460px;
+    font-size: clamp(30px, 3vw, 44px);
+    line-height: 1;
+    letter-spacing: -.065em;
+}
+
+.garage-puzzle-card h3 {
+    max-width: 1230px;
+    font-size: 22px;
+    line-height: 1.05;
+    letter-spacing: -.052em;
+}
+
+.garage-puzzle-card p {
+    max-width: 410px;
+    margin-top: 11px;
+    color: currentColor;
+    opacity: .68;
+    font-size: 14px;
+    line-height: 1.58;
+}
+
+.garage-puzzle-card svg {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    color: var(--puzzle-accent);
+    stroke-width: 1.9;
+    transition: transform var(--transition);
+}
+
+.garage-puzzle-card:hover svg {
+    transform: translateY(-5px) rotate(-5deg);
+}
+
+/* Photo cards */
+
+.garage-puzzle-card--photo {
+    padding: 0;
+    background: var(--color-black);
+    color: var(--color-white);
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.garage-puzzle-card--photo::before,
+.garage-puzzle-card--photo::after {
+    display: none;
+}
+
+.garage-puzzle-card--photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.03);
+    transition: transform 850ms var(--ease);
+}
+
+.garage-puzzle-card--photo:hover img {
+    transform: scale(1.085);
+}
+
+.garage-puzzle-card--photo>div {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    align-content: end;
+    padding: 22px;
+    background:
+        linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .58)),
+        linear-gradient(90deg, rgba(0, 0, 0, .46), transparent 68%);
+}
+
+.garage-puzzle-card--photo h3,
+.garage-puzzle-card--photo span {
+    color: var(--color-white);
+}
+
+/* Positions — 6 cards only */
+
+.garage-puzzle-card--intro {
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    --puzzle-bg: var(--color-offwhite);
+    --puzzle-color: var(--color-black);
+    --puzzle-accent: var(--color-eggplant);
+}
+
+.garage-puzzle-card--repair {
+    grid-column: 5 / 9;
+    grid-row: 1 / 3;
+}
+
+.garage-puzzle-card--opener {
+    grid-column: 9 / 13;
+    grid-row: 1 / 2;
+    --puzzle-bg: var(--color-sky);
+    --puzzle-color: var(--color-black);
+    --puzzle-accent: var(--color-eggplant);
+}
+
+.garage-puzzle-card--spring {
+    grid-column: 9 / 11;
+    grid-row: 2 / 3;
+    --puzzle-bg: var(--color-black);
+    --puzzle-color: var(--color-white);
+    --puzzle-accent: var(--color-sky);
+    padding: 18px;
+}
+
+.garage-puzzle-card--spring span {
+    max-width: 120px;
+    margin-bottom: 0;
+}
+
+.garage-puzzle-card--spring svg {
+    width: 28px;
+    height: 28px;
+}
+
+.garage-puzzle-card--replacement-photo {
+    grid-column: 11 / 13;
+    grid-row: 2 / 4;
+}
+
+.garage-puzzle-card--compare {
+    grid-column: 1 / 11;
+    grid-row: 3 / 4;
+    --puzzle-bg: var(--color-eggplant);
+    --puzzle-color: var(--color-white);
+    --puzzle-accent: var(--color-sky);
+}
