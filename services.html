@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Garage Door Services | Liftora</title>
+    <meta name="description"
+        content="Explore six garage door service categories through Liftora and start a clearer request before comparing provider-supplied options.">
+    <meta name="keywords"
+        content="garage door services, garage door repair request, garage door installation request, garage door opener services, garage door replacement">
+    <meta name="theme-color" content="#101214">
+
+    <meta property="og:title" content="Garage Door Services | Liftora">
+    <meta property="og:description"
+        content="Choose the garage door request type that best matches your situation and compare provider-supplied options.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/service-installation.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" aria-label="Site header">
+        <div class="pre-header">
+            <div class="container-wide pre-header__inner">
+                <div class="pre-header__note">
+                    <span data-config="brand.shortTagline">Independent garage door matching platform</span>
+                </div>
+
+                <div class="pre-header__links" aria-label="Platform contact links">
+                    <a href="tel:+10000000000" data-config-href="contact.phone">
+                        <i data-lucide="phone"></i>
+                        <span data-config="contact.phone">+1 (000) 000-0000</span>
+                    </a>
+
+                    <a href="mailto:support@liftora.com" data-config-href="contact.email">
+                        <i data-lucide="mail"></i>
+                        <span data-config="contact.email">support@liftora.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container-wide main-header__inner">
+                <a href="index.html" class="site-logo" aria-label="Liftora home">
+                    <img src="assets/images/logo.svg" alt="Liftora logo" data-logo="dark">
+                </a>
+
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="about.html">About</a>
+                        </li>
+
+                        <li class="main-nav__item has-dropdown">
+                            <div class="main-nav__service-wrap">
+                                <a class="main-nav__link" href="services.html">Services</a>
+                                <button class="dropdown-toggle" type="button" data-dropdown-toggle aria-expanded="false"
+                                    aria-label="Open garage door services menu">
+                                    <i data-lucide="chevron-down"></i>
+                                </button>
+                            </div>
+
+                            <div class="services-dropdown" data-services-dropdown data-render="service-dropdown"
+                                aria-label="Garage door service links"></div>
+                        </li>
+
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <a class="btn btn-light btn-icon" href="tel:+10000000000" data-config-href="contact.phone"
+                        aria-label="Call Liftora platform">
+                        <i data-lucide="phone"></i>
+                    </a>
+
+                    <a class="btn btn-primary" href="contact.html#request-form">
+                        <span>Start Request</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <button class="mobile-toggle" type="button" data-mobile-toggle aria-label="Open mobile menu"
+                    aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" data-mobile-menu data-mobile-overlay-close hidden aria-hidden="true">
+        <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+            <div class="mobile-menu__top">
+                <a href="index.html" class="mobile-menu__logo" aria-label="Liftora home">
+                    <img src="assets/images/logo-light.svg" alt="Liftora logo" data-logo="light">
+                </a>
+
+                <button class="mobile-menu__close" type="button" data-mobile-close aria-label="Close mobile menu">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+                <div class="mobile-menu__main-links">
+                    <a class="mobile-menu__link" href="index.html">
+                        <span>Home</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a class="mobile-menu__link" href="about.html">
+                        <span>About</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a class="mobile-menu__link" href="services.html">
+                        <span>Services</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a class="mobile-menu__link" href="contact.html">
+                        <span>Contact</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <div class="mobile-menu__services">
+                    <p class="mobile-menu__label">Garage door categories</p>
+                    <div class="mobile-menu__service-grid" data-render="mobile-services"></div>
+                </div>
+            </nav>
+
+            <div class="mobile-menu__bottom">
+                <div class="mobile-menu__contact">
+                    <a href="tel:+10000000000" data-config-href="contact.phone">
+                        <i data-lucide="phone"></i>
+                        <span data-config="contact.phone">+1 (000) 000-0000</span>
+                    </a>
+
+                    <a href="mailto:support@liftora.com" data-config-href="contact.email">
+                        <i data-lucide="mail"></i>
+                        <span data-config="contact.email">support@liftora.com</span>
+                    </a>
+                </div>
+
+                <a class="btn btn-accent" href="contact.html#request-form">
+                    <span>Start Matching Request</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+        <!-- Section 1 — Services Hero -->
+        <section class="hero hero--services" aria-labelledby="services-hero-title">
+            <div class="container inner-hero__content" data-animate="fade-right">
+                <p class="kicker">Garage door service categories</p>
+                <h1 id="services-hero-title">Garage Door Service Categories You Can Start From</h1>
+                <p>
+                    Choose the request type that best matches your garage door situation. Liftora helps organize the
+                    next step toward provider comparison.
+                </p>
+
+                <div class="btn-row hero__actions">
+                    <a class="btn btn-accent" href="contact.html#request-form">
+                        <span>Start Request</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a class="btn btn-light" href="#interactive-services">
+                        <span>Compare Categories</span>
+                        <i data-lucide="copy-check"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 — Dark Icon Strip -->
+        <section class="section-compact icon-strip" aria-label="Garage door service category strip">
+            <div data-render="icon-strip" data-icon-source="services"></div>
+        </section>
+
+        <!-- Section 3 — Interactive Services Showcase -->
+        <section class="section section-light" id="interactive-services" aria-labelledby="interactive-services-title">
+            <div class="container-wide">
+                <div class="section-header">
+                    <div class="section-header__text" data-animate>
+                        <p class="section-kicker">Interactive service showcase</p>
+                        <h2 id="interactive-services-title">Explore the Six Liftora Garage Door Request Categories</h2>
+                    </div>
+
+                    <p class="lead" data-animate>
+                        Click a category to preview the request path, then open the service page for more
+                        provider-comparison guidance.
+                    </p>
+                </div>
+
+                <div class="services-showcase__layout" data-services-showcase>
+                    <a class="showcase-image" href="garage-door-repair.html" data-showcase-image
+                        data-animate="fade-right" aria-label="Open selected service page">
+                        <div class="showcase-image__icon" data-showcase-icon>
+                            <i data-lucide="wrench"></i>
+                        </div>
+
+                        <h2 data-showcase-title>Garage Door Repair</h2>
+                        <p data-showcase-text>
+                            Start a request for a stuck, noisy, uneven, or malfunctioning garage door and compare
+                            provider-supplied repair options.
+                        </p>
+
+                        <span class="btn-row" style="margin-top: 26px;">
+                            <span class="btn btn-accent">
+                                <span>View Selected Service</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </span>
+                        </span>
+                    </a>
+
+                    <div class="showcase-list" data-showcase-list data-animate="fade-left"
+                        aria-label="Garage door service categories"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 — All Services Grid -->
+        <section class="section section-offwhite" id="all-services" aria-labelledby="all-services-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header__text" data-animate>
+                        <p class="section-kicker">All services</p>
+                        <h2 id="all-services-title">Six Focused Garage Door Request Categories</h2>
+                    </div>
+
+                    <p class="lead" data-animate>
+                        Liftora keeps the service structure clear: exactly six categories for common garage door
+                        requests.
+                    </p>
+                </div>
+
+                <div class="services-grid stagger" data-render="services-grid" data-animate></div>
+            </div>
+        </section>
+
+        <!-- Section 5 — Repair, Replacement, or Opener? -->
+        <section class="section section-light" id="category-guidance" aria-labelledby="category-guidance-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header__text" data-animate>
+                        <p class="section-kicker">Category guidance</p>
+                        <h2 id="category-guidance-title">Repair, Replacement, or Opener?</h2>
+                    </div>
+
+                    <p class="lead" data-animate>
+                        These paths are starting points. Providers may evaluate the situation and supply details
+                        directly.
+                    </p>
+                </div>
+
+                <div class="guidance-columns stagger">
+                    <article class="guidance-column" data-animate>
+                        <i data-lucide="wrench"></i>
+                        <h3>Repair discussion</h3>
+                        <p>
+                            Repair may be discussed with a provider when the door is stuck, noisy, uneven, scraping,
+                            shaky, or not moving as expected. Provider-supplied details can clarify scope, parts,
+                            timing, and terms.
+                        </p>
+                    </article>
+
+                    <article class="guidance-column" data-animate>
+                        <i data-lucide="replace"></i>
+                        <h3>Replacement discussion</h3>
+                        <p>
+                            Replacement may be discussed with a provider when the door is outdated, badly damaged,
+                            inefficient, or repeatedly problematic. Review product, warranty, fit, and scheduling
+                            details directly.
+                        </p>
+                    </article>
+
+                    <article class="guidance-column" data-animate>
+                        <i data-lucide="radio-tower"></i>
+                        <h3>Opener discussion</h3>
+                        <p>
+                            Opener-related requests may include remote, keypad, motor, sensor, chain, belt, or smart
+                            opener concerns. A provider can evaluate compatibility and supply repair or product options.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6 — What Details Help Providers Understand the Request -->
+        <section class="section section-offwhite" id="request-details" aria-labelledby="request-details-title">
+            <div class="container">
+                <div class="compare-section__layout">
+                    <div class="stack-lg" data-animate="fade-right">
+                        <div>
+                            <p class="section-kicker">Request details</p>
+                            <h2 id="request-details-title">What Details Help Providers Understand the Request</h2>
+                        </div>
+
+                        <p class="lead">
+                            You do not need to diagnose the issue. Describe what you notice and what you want to
+                            compare. Providers can supply evaluation details, scope, pricing, timing, and terms
+                            directly.
+                        </p>
+
+                        <div class="btn-row">
+                            <a class="btn btn-primary" href="contact.html#request-form">
+                                <span>Start a Garage Door Request</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <ul class="line-list check-grid" data-animate="fade-left">
+                        <li class="line-list__item">
+                            <i data-lucide="door-open"></i>
+                            <span>
+                                <strong>Door type</strong>
+                                <span>Sectional, insulated, carriage-style, roll-up, aluminum/glass, or custom panel if
+                                    known.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="ruler"></i>
+                            <span>
+                                <strong>Door size</strong>
+                                <span>Single, double, custom, or approximate dimensions if you already know them.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="panel-top"></i>
+                            <span>
+                                <strong>Visible damage</strong>
+                                <span>Dents, gaps, bent tracks, damaged panels, scraping areas, or uneven
+                                    alignment.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="activity"></i>
+                            <span>
+                                <strong>Movement or noise</strong>
+                                <span>Stopping halfway, shaking, grinding, scraping, heavy movement, or inconsistent
+                                    travel.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="radio-tower"></i>
+                            <span>
+                                <strong>Opener model</strong>
+                                <span>Brand, model, remote, keypad, sensor, chain, belt, or smart opener details if
+                                    visible.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="rotate-cw"></i>
+                            <span>
+                                <strong>Spring or cable concerns</strong>
+                                <span>Describe visible symptoms without touching or adjusting tension-related
+                                    parts.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="calendar-clock"></i>
+                            <span>
+                                <strong>Timing preferences</strong>
+                                <span>Share general scheduling needs. Provider availability and timelines may
+                                    vary.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="map-pin"></i>
+                            <span>
+                                <strong>Location or ZIP</strong>
+                                <span>Location helps structure provider comparison and availability discussions.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7 — Safety-Sensitive Garage Door Notes -->
+        <section class="section section-dark" id="safety-notes" aria-labelledby="safety-notes-title">
+            <div class="container">
+                <div class="safety-note" data-animate>
+                    <div class="safety-note__icon">
+                        <i data-lucide="triangle-alert"></i>
+                    </div>
+
+                    <p class="section-kicker">Safety-sensitive notes</p>
+                    <h2 id="safety-notes-title">Garage Doors Can Involve Heavy Moving Parts and Tension Systems</h2>
+                    <p>
+                        Spring, cable, track, roller, panel, and opener-related concerns should be described clearly for
+                        provider evaluation. Liftora does not provide DIY repair instructions and does not instruct
+                        users to loosen, tighten, replace, or adjust safety-sensitive components.
+                    </p>
+
+                    <div class="safety-note__list">
+                        <div class="safety-note__item">Describe symptoms without forcing the door.</div>
+                        <div class="safety-note__item">Do not attempt tension-system adjustments through this platform.
+                        </div>
+                        <div class="safety-note__item">Discuss repair needs with qualified providers directly.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8 — Provider Comparison Checklist -->
+        <section class="section section-light" id="provider-checklist" aria-labelledby="provider-checklist-title">
+            <div class="container">
+                <div class="compare-section__layout">
+                    <div class="stack-lg" data-animate="fade-right">
+                        <div>
+                            <p class="section-kicker">Provider comparison</p>
+                            <h2 id="provider-checklist-title">Provider-Supplied Details to Review Directly</h2>
+                        </div>
+
+                        <p class="lead">
+                            Liftora helps organize your request, but providers supply the details that shape the
+                            decision. Review the terms directly before continuing.
+                        </p>
+
+                        <div class="btn-row">
+                            <a class="btn btn-primary" href="contact.html#request-form">
+                                <span>Start Matching Request</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <ul class="line-list check-grid" data-animate="fade-left">
+                        <li class="line-list__item">
+                            <i data-lucide="clipboard-check"></i>
+                            <span>
+                                <strong>Quote scope</strong>
+                                <span>Review what is included, excluded, optional, or dependent on provider
+                                    evaluation.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="package-check"></i>
+                            <span>
+                                <strong>Parts or products</strong>
+                                <span>Ask what parts, doors, openers, panels, springs, cables, or products may be
+                                    involved.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="file-text"></i>
+                            <span>
+                                <strong>Labor and service terms</strong>
+                                <span>Review provider-supplied service terms directly before continuing.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="calendar-days"></i>
+                            <span>
+                                <strong>Timing</strong>
+                                <span>Scheduling, availability, and project timelines may vary by provider and
+                                    location.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="badge-check"></i>
+                            <span>
+                                <strong>Warranty terms</strong>
+                                <span>Warranty and product terms are provider-supplied and should be reviewed
+                                    directly.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="shield-check"></i>
+                            <span>
+                                <strong>Licensing and insurance where relevant</strong>
+                                <span>Credentials, insurance, and licensing should be verified directly with
+                                    providers.</span>
+                            </span>
+                        </li>
+
+                        <li class="line-list__item">
+                            <i data-lucide="landmark"></i>
+                            <span>
+                                <strong>Permits, HOA, or local requirements</strong>
+                                <span>Some replacement or installation requests may involve additional
+                                    requirements.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9 — Services FAQ -->
+        <section class="section section-offwhite" id="services-faq" aria-labelledby="services-faq-title">
+            <div class="container">
+                <div class="faq-layout">
+                    <div class="faq-photo" data-animate="fade-right">
+                        <img src="assets/images/cta-garage-door.jpg" alt="Garage door visual for Liftora services FAQ"
+                            loading="lazy">
+
+                        <div class="faq-photo__badge">
+                            <strong>Service category clarity</strong>
+                            <span>Choose the closest request type and review provider-supplied terms directly.</span>
+                        </div>
+                    </div>
+
+                    <div data-animate="fade-left">
+                        <div class="section-header section-header--narrow">
+                            <div class="section-header__text">
+                                <p class="section-kicker">Services FAQ</p>
+                                <h2 id="services-faq-title">Garage Door Service Questions</h2>
+                            </div>
+                        </div>
+
+                        <div data-faq="services" data-render-faq></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10 — Final CTA -->
+        <section class="section final-cta" id="start-request" aria-labelledby="final-cta-title">
+            <div class="container-wide">
+                <div class="final-cta__card" data-animate>
+                    <div class="final-cta__main">
+                        <h2 id="final-cta-title">Choose a Garage Door Category and Start Your Request</h2>
+
+                        <p>
+                            Select the closest service category, describe your garage door need, and compare
+                            provider-supplied options before continuing directly.
+                        </p>
+
+                        <div class="final-cta__actions">
+                            <a class="btn btn-accent" href="contact.html#request-form">
+                                <span>Start Matching Request</span>
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+
+                            <a class="btn btn-ghost" href="contact.html">
+                                <span>Contact Liftora</span>
+                                <i data-lucide="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cta-marquee" data-render="cta-marquee" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+        <div class="footer-top">
+            <div class="container-wide footer-top__inner">
+                <div>
+                    <a href="index.html" class="footer-logo" aria-label="Liftora home">
+                        <img src="assets/images/logo-light.svg" alt="Liftora logo" data-logo="light">
+                    </a>
+                </div>
+
+                <div class="footer-top__text">
+                    <h2 data-config="footer.ctaTitle">Ready to start a clearer garage door request?</h2>
+                    <p data-config="footer.ctaText">Use Liftora to organize your request before comparing
+                        provider-supplied details.</p>
+                </div>
+
+                <a class="btn btn-accent" href="contact.html#request-form">
+                    <span>Start Request</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="container-wide footer-grid">
+                <div class="footer-column">
+                    <h3>Platform</h3>
+                    <p data-config="footer.description">
+                        Liftora helps homeowners start clearer garage door requests and compare provider-supplied
+                        options from independent local providers.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <div class="footer-links" data-render="footer-nav"></div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Garage Door Services</h3>
+                    <div class="footer-links" data-render="footer-services"></div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <a href="tel:+10000000000" data-config-href="contact.phone">
+                            <i data-lucide="phone"></i>
+                            <span data-config="contact.phone">+1 (000) 000-0000</span>
+                        </a>
+
+                        <a href="mailto:support@liftora.com" data-config-href="contact.email">
+                            <i data-lucide="mail"></i>
+                            <span data-config="contact.email">support@liftora.com</span>
+                        </a>
+
+                        <span>
+                            <i data-lucide="map-pin"></i>
+                            <span data-config="contact.address">Platform Address Here</span>
+                        </span>
+
+                        <span>
+                            <i data-lucide="badge-info"></i>
+                            <span data-config="contact.companyId">Company ID Here</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container-wide">
+                <p class="footer-disclaimer" data-config="legal.disclaimer">
+                    Liftora is an independent garage door matching platform. Liftora does not perform garage door
+                    repair, installation, replacement, inspection, manufacturing, or contracting services. Provider
+                    availability, pricing, credentials, licensing, insurance, warranties, timelines, and service terms
+                    are supplied by participating providers and should be reviewed directly with them.
+                </p>
+
+                <div class="footer-bottom__row">
+                    <p data-config="footer.copyright">© 2026 Liftora. All rights reserved.</p>
+
+                    <div class="footer-legal">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-banner" data-cookie-banner hidden role="region" aria-label="Cookie notice">
+        <div class="cookie-banner__inner">
+            <p>
+                <span data-config="legal.cookieText">
+                    Liftora uses essential local storage to remember basic site preferences, including cookie notice
+                    acceptance. By continuing, you agree to our Privacy Policy and Terms.
+                </span>
+                <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookie Policy</a>
+            </p>
+
+            <div class="cookie-banner__actions">
+                <button class="btn btn-accent" type="button" data-cookie-accept>
+                    <span>Accept</span>
+                    <i data-lucide="check"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/global.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
+    <script src="assets/js/forms.js" defer></script>
+</body>
+
+</html>
