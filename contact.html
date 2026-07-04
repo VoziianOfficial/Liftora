@@ -234,85 +234,118 @@
             </div>
         </section>
 
-        <!-- Section 3 — Main Contact Form Split -->
-        <section class="section section-light" id="request-form" aria-labelledby="request-form-title">
-            <div class="container">
-                <div class="contact-form-split" data-animate>
-                    <div class="contact-form-panel">
+    <!-- Section 3 — Main Contact Form Split -->
+    <section class="section section-light contact-request-zone" id="request-form" aria-labelledby="request-form-title">
+        <div class="container-wide">
+            <div class="contact-request-zone__split" data-animate>
+                <div class="contact-request-zone__media">
+                    <img src="assets/images/contact-garage-door.jpg"
+                        alt="Garage door request visual for Liftora contact form" loading="lazy">
+    
+                    <div class="contact-request-zone__media-content">
                         <p class="section-kicker">Garage door request form</p>
                         <h2 id="request-form-title">Share the Details That Help Structure the Request</h2>
                         <p>
-                            Liftora is an independent matching platform. Your request helps organize the starting point
-                            for provider-supplied options and direct provider review.
+                            Liftora helps turn a garage door concern into a clearer request before provider-supplied
+                            options are reviewed directly.
                         </p>
                     </div>
-
-                    <div class="contact-form-wrap">
-                        <form class="form" action="contact.php" method="post" data-liftora-form novalidate>
-                            <div class="form-status" data-form-status role="status" aria-live="polite"></div>
-
-                            <div class="honeypot" aria-hidden="true">
-                                <label for="website">Website</label>
-                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-                            </div>
-
-                            <div class="form-grid">
-                                <div class="form-field">
-                                    <label for="name">Name *</label>
-                                    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name"
-                                        required>
-                                </div>
-
-                                <div class="form-field">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                                        autocomplete="email" required>
-                                </div>
-
-                                <div class="form-field">
-                                    <label for="phone">Phone *</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+1 (000) 000-0000"
-                                        autocomplete="tel" required>
-                                </div>
-
-                                <div class="form-field">
-                                    <label for="location">ZIP / City *</label>
-                                    <input type="text" id="location" name="location" placeholder="ZIP or city"
-                                        autocomplete="postal-code" required>
-                                </div>
-
-                                <div class="form-field form-field--full">
-                                    <label for="service">Service Need *</label>
-                                    <select id="service" name="service" data-render="service-options" required>
-                                        <option value="">Select a service need</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-field form-field--full">
-                                    <label for="message">Message / Project Details *</label>
-                                    <textarea id="message" name="message"
-                                        placeholder="Describe the door issue, opener behavior, visible damage, replacement goals, timing preferences, or anything else that may help structure the request."
-                                        required></textarea>
-                                </div>
-                            </div>
-
-                            <p class="form-note">
-                                <i data-lucide="info"></i>
-                                <span data-form-legal-note>
-                                    By submitting, you request to be contacted about your garage door project. Provider
-                                    availability, pricing, credentials, timelines, and terms may vary.
-                                </span>
-                            </p>
-
-                            <button class="btn btn-accent" type="submit">
-                                <span>Submit Garage Door Request</span>
-                                <i data-lucide="send"></i>
-                            </button>
-                        </form>
+    
+                    <div class="contact-request-zone__media-badge">
+                        <i data-lucide="clipboard-check"></i>
+                        <span>Category, timing, symptoms, and location help shape the request.</span>
                     </div>
                 </div>
+    
+                <div class="contact-request-zone__form-wrap">
+                    <form class="form contact-request-zone__form" action="contact.php" method="post" data-liftora-form
+                        novalidate>
+                        <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+    
+                        <div class="honeypot" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+    
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name"
+                                    required>
+                            </div>
+    
+                            <div class="form-field">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com"
+                                    autocomplete="email" required>
+                            </div>
+    
+                            <div class="form-field">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (000) 000-0000" autocomplete="tel"
+                                    required>
+                            </div>
+    
+                            <div class="form-field">
+                                <label for="location">ZIP / City *</label>
+                                <input type="text" id="location" name="location" placeholder="ZIP or city"
+                                    autocomplete="postal-code" required>
+                            </div>
+    
+                            <div class="form-field form-field--full">
+                                <label for="service">Service Need *</label>
+                                <select id="service" name="service" data-render="service-options" required>
+                                    <option value="">Select a service need</option>
+                                </select>
+                            </div>
+    
+                            <div class="form-field form-field--full">
+                                <label for="message">Message / Project Details *</label>
+                                <textarea id="message" name="message"
+                                    placeholder="Describe the door issue, opener behavior, visible damage, replacement goals, timing preferences, or anything else that may help structure the request."
+                                    required></textarea>
+                            </div>
+                        </div>
+    
+                        <p class="form-note">
+                            <i data-lucide="info"></i>
+                            <span data-form-legal-note>
+                                By submitting, you request to be contacted about your garage door project. Provider
+                                availability, pricing, credentials, timelines, and terms may vary.
+                            </span>
+                        </p>
+    
+                        <button class="btn btn-accent" type="submit">
+                            <span>Submit Garage Door Request</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-        </section>
+    
+            <div class="contact-request-zone__stats" data-count-zone data-animate>
+                <div class="contact-request-stat">
+                    <strong data-count-to="6">00</strong>
+                    <span>request categories</span>
+                </div>
+    
+                <div class="contact-request-stat">
+                    <strong data-count-to="4">00</strong>
+                    <span>main details to prepare</span>
+                </div>
+    
+                <div class="contact-request-stat">
+                    <strong data-count-to="24">00</strong>
+                    <span>hours to submit a request online</span>
+                </div>
+    
+                <div class="contact-request-stat">
+                    <strong data-count-to="1">00</strong>
+                    <span>clearer starting point</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <!-- Section 4 — What Happens After You Submit -->
         <section class="section section-dark" id="after-submit" aria-labelledby="after-submit-title">

@@ -1719,3 +1719,107 @@
         font-size: 21px;
     }
 }
+
+@media (max-width: 1100px) {
+    .contact-request-zone__split {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-request-zone__media {
+        margin-left: 0;
+        min-height: 460px;
+    }
+
+    .contact-request-zone__media img {
+        min-height: 460px;
+    }
+
+    .contact-request-zone__form {
+        min-height: auto;
+    }
+
+    .contact-request-zone__stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-request-stat:nth-child(2) {
+        border-right: 0;
+    }
+
+    .contact-request-stat:nth-child(1),
+    .contact-request-stat:nth-child(2) {
+        border-bottom: 1px solid var(--color-border);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-request-zone__media {
+        min-height: 390px;
+        border-radius: 28px;
+    }
+
+    .contact-request-zone__media img {
+        min-height: 390px;
+    }
+
+    .contact-request-zone__media-content {
+        left: 28px;
+        right: 28px;
+        bottom: 34px;
+    }
+
+    .contact-request-zone__media-content h2 {
+        font-size: 36px;
+    }
+
+    .contact-request-zone__media-badge {
+        left: 24px;
+        right: 24px;
+        top: 24px;
+        max-width: none;
+    }
+
+    .contact-request-zone__form {
+        padding: 26px;
+        border-radius: 28px;
+    }
+}
+
+@media (max-width: 560px) {
+    .contact-request-zone__media {
+        min-height: 340px;
+        border-radius: 22px;
+    }
+
+    .contact-request-zone__media img {
+        min-height: 340px;
+    }
+
+    .contact-request-zone__media-content h2 {
+        font-size: 31px;
+    }
+
+    .contact-request-zone__media-badge {
+        display: none;
+    }
+
+    .contact-request-zone__form {
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .contact-request-zone__stats {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-request-stat,
+    .contact-request-stat:nth-child(1),
+    .contact-request-stat:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .contact-request-stat:last-child {
+        border-bottom: 0;
+    }
+}
