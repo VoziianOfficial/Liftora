@@ -1316,3 +1316,135 @@
         getConfig
     };
 })();
+
+
+(function () {
+    document.addEventListener("DOMContentLoaded", initDoorTypesShowcase);
+
+    function initDoorTypesShowcase() {
+        const config = window.LIFTORA_CONFIG || {};
+        const showcase = config.doorTypesShowcase || {};
+        const items = Array.isArray(showcase.items) ? showcase.items : [];
+
+        const cardsMount = document.querySelector('[data-render="door-type-showcase-cards"]');
+        const notesMount = document.querySelector('[data-render="door-type-showcase-notes"]');
+        const image = document.querySelector("[data-door-types-photo]");
+        const imageLabel = document.querySelector("[data-door-types-photo-label]");
+        const photoWrap = image ? image.closest(".door-types-showcase__photo") : null;
+
+        if (!cardsMount || !notesMount || !image || !imageLabel || !items.length) return;
+
+        cardsMount.innerHTML = items.map((item, index) => {
+            const variant = item.variant || "soft";
+            const icon = item.icon || "door-open";
+
+            return `
+                <button class="door-type-tile door-type-tile--${escapeAttr(variant)}" type="button" data-door-type-index="${index}" aria-pressed="${index === 0 ? "true" : "false"}">
+                    <div>
+                        <span>${escapeHTML(item.number || String(index + 1).padStart(2, "0"))}</span>
+                        <h3>${escapeHTML(item.title || "")}</h3>
+                    </div>
+                    <i data-lucide="${escapeAttr(icon)}" aria-hidden="true"></i>
+                </button>
+            `;
+        }).join("");
+
+        const buttons = Array.from(cardsMount.querySelectorAll("[data-door-type-index]"));
+
+        buttons.forEach((button) => {
+            const index = Number(button.getAttribute("data-door-type-index"));
+
+            button.addEventListener("mouseenter", () => {
+                setActiveDoorType(index, false);
+            });
+
+            button.addEventListener("click", () => {
+                setActiveDoorType(index, true);
+            });
+
+            button.addEventListener("focus", () => {
+                setActiveDoorType(index, false);
+            });
+        });
+
+        setActiveDoorType(0, true);
+        refreshLucideIcons();
+
+        function setActiveDoorType(index, lockFocus) {
+            const item = items[index];
+            if (!item) return;
+
+            buttons.forEach((button, buttonIndex) => {
+                const isActive = buttonIndex === index;
+                button.classList.toggle("is-active", isActive);
+                button.setAttribute("aria-pressed", isActive ? "true" : "false");
+            });
+
+            if (photoWrap) {
+                photoWrap.classList.add("is-changing");
+            }
+
+            window.setTimeout(() => {
+                if (item.image) {
+                    image.src = item.image;
+                }
+
+                if (item.alt) {
+                    image.alt = item.alt;
+                }
+
+                imageLabel.textContent = item.imageLabel || "Door type helps providers understand the request context";
+
+                renderNotes(item.notes || []);
+
+                if (photoWrap) {
+                    photoWrap.classList.remove("is-changing");
+                }
+
+                refreshLucideIcons();
+            }, 120);
+
+            if (lockFocus && buttons[index]) {
+                buttons[index].focus({ preventScroll: true });
+            }
+        }
+
+        function renderNotes(notes) {
+            notesMount.innerHTML = notes.map((note) => {
+                const icon = note.icon || "arrow-up-right";
+                const accent = note.accent || "eggplant";
+                const url = note.url || "services.html";
+
+                return `
+                    <a class="door-types-note door-types-note--${escapeAttr(accent)}" href="${escapeAttr(url)}">
+                        <span class="door-types-note__line"></span>
+                        <div>
+                            <p>${escapeHTML(note.label || "")}</p>
+                            <h3>${escapeHTML(note.title || "")}</h3>
+                        </div>
+                        <i data-lucide="${escapeAttr(icon)}" aria-hidden="true"></i>
+                    </a>
+                `;
+            }).join("");
+        }
+    }
+
+    function refreshLucideIcons() {
+        if (window.lucide && typeof window.lucide.createIcons === "function") {
+            window.lucide.createIcons();
+        }
+    }
+
+    function escapeHTML(value) {
+        return String(value ?? "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function escapeAttr(value) {
+        return escapeHTML(value).replaceAll("`", "&#096;");
+    }
+})();

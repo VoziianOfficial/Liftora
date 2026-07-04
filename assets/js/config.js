@@ -505,6 +505,161 @@ window.LIFTORA_CONFIG = {
         }
     ],
 
+    doorTypesShowcase: {
+        items: [
+            {
+                number: "01",
+                title: "Sectional",
+                icon: "panel-top",
+                variant: "black",
+                image: "assets/images/cta-garage-door.jpg",
+                alt: "Sectional garage door exterior",
+                imageLabel: "Sectional doors are common and can shape opener, track, roller, panel, and repair conversations.",
+                notes: [
+                    {
+                        label: "For repair requests",
+                        title: "Sectional door requests may involve rollers, tracks, springs, opener behavior, or panel movement details.",
+                        icon: "arrow-up-right",
+                        url: "services.html",
+                        accent: "eggplant"
+                    },
+                    {
+                        label: "For replacement requests",
+                        title: "Panel layout, insulation, size, windows, and hardware preferences can shape provider-supplied options.",
+                        icon: "arrow-up-right",
+                        url: "garage-door-replacement.html",
+                        accent: "sky"
+                    }
+                ]
+            },
+            {
+                number: "02",
+                title: "Insulated",
+                icon: "shield-check",
+                variant: "eggplant",
+                image: "assets/images/service-replacement.jpg",
+                alt: "Insulated garage door replacement example",
+                imageLabel: "Insulated doors can affect comfort, noise, energy goals, product selection, and replacement conversations.",
+                notes: [
+                    {
+                        label: "For repair requests",
+                        title: "Insulated door concerns may involve panel condition, weight, movement, seals, or opener strain.",
+                        icon: "arrow-up-right",
+                        url: "garage-door-repair.html",
+                        accent: "eggplant"
+                    },
+                    {
+                        label: "For replacement requests",
+                        title: "Insulation level, material, thickness, color, windows, and warranty terms can shape provider options.",
+                        icon: "arrow-up-right",
+                        url: "garage-door-replacement.html",
+                        accent: "sky"
+                    }
+                ]
+            },
+            {
+                number: "03",
+                title: "Glass doors",
+                icon: "square-stack",
+                variant: "sky",
+                image: "assets/images/service-installation.jpg",
+                alt: "Modern glass garage door style example",
+                imageLabel: "Glass and aluminum-style doors can shift the conversation toward modern design, panel layout, hardware, and product options.",
+                notes: [
+                    {
+                        label: "For repair requests",
+                        title: "Glass-style door requests may include panel, frame, roller, track, seal, or opener compatibility details.",
+                        icon: "arrow-up-right",
+                        url: "track-roller-panel-repair.html",
+                        accent: "eggplant"
+                    },
+                    {
+                        label: "For installation requests",
+                        title: "Frame finish, glass opacity, insulation, panel layout, and opener setup can affect provider-supplied options.",
+                        icon: "arrow-up-right",
+                        url: "garage-door-installation.html",
+                        accent: "sky"
+                    }
+                ]
+            },
+            {
+                number: "04",
+                title: "Carriage style",
+                icon: "warehouse",
+                variant: "gray",
+                image: "assets/images/about-garage-door.jpg",
+                alt: "Carriage style garage door exterior",
+                imageLabel: "Carriage-style doors can influence design, hardware, windows, panel pattern, and curb-appeal conversations.",
+                notes: [
+                    {
+                        label: "For repair requests",
+                        title: "Carriage-style requests may involve decorative hardware, panel alignment, opener behavior, or visible wear.",
+                        icon: "arrow-up-right",
+                        url: "garage-door-repair.html",
+                        accent: "eggplant"
+                    },
+                    {
+                        label: "For replacement requests",
+                        title: "Window placement, decorative hardware, color, material, and insulation choices can shape provider options.",
+                        icon: "arrow-up-right",
+                        url: "garage-door-replacement.html",
+                        accent: "sky"
+                    }
+                ]
+            },
+            {
+                number: "05",
+                title: "Roll-up doors",
+                icon: "rotate-cw",
+                variant: "soft",
+                image: "assets/images/service-track-panel.jpg",
+                alt: "Roll-up garage door request context",
+                imageLabel: "Roll-up door requests can involve access, movement, track condition, slats, hardware, and provider evaluation details.",
+                notes: [
+                    {
+                        label: "For repair requests",
+                        title: "Roll-up door issues may involve movement, tracks, slats, rollers, noise, access, or opening limitations.",
+                        icon: "arrow-up-right",
+                        url: "garage-door-repair.html",
+                        accent: "eggplant"
+                    },
+                    {
+                        label: "For provider comparison",
+                        title: "Door size, usage, access conditions, product type, timing, and service scope should be reviewed directly.",
+                        icon: "arrow-up-right",
+                        url: "services.html",
+                        accent: "sky"
+                    }
+                ]
+            },
+            {
+                number: "06",
+                title: "Custom panels",
+                icon: "layout-panel-top",
+                variant: "outline",
+                image: "assets/images/hero-garage-door.jpg",
+                alt: "Custom garage door panel design",
+                imageLabel: "Custom panel requests can depend on size, material, pattern, windows, color, hardware, and provider-supplied product details.",
+                notes: [
+                    {
+                        label: "For repair requests",
+                        title: "Custom panel concerns may involve matching existing panels, visible damage, hardware, or movement issues.",
+                        icon: "arrow-up-right",
+                        url: "track-roller-panel-repair.html",
+                        accent: "eggplant"
+                    },
+                    {
+                        label: "For replacement requests",
+                        title: "Custom panel layout, color, finish, windows, and hardware preferences can shape replacement discussions.",
+                        icon: "arrow-up-right",
+                        url: "garage-door-replacement.html",
+                        accent: "sky"
+                    }
+                ]
+            }
+        ]
+    },
+
     comparisonItems: [
         "Door type and size",
         "Repair vs replacement scope",

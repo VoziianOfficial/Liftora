@@ -5159,3 +5159,74 @@ h4 {
 .door-types-note:hover svg {
     transform: translate(4px, -4px);
 }
+
+.door-types-note--eggplant .door-types-note__line {
+    background: var(--color-eggplant);
+}
+
+.door-types-note--eggplant svg {
+    color: var(--color-eggplant);
+}
+
+.door-types-note--sky .door-types-note__line {
+    background: var(--color-sky);
+}
+
+.door-types-note--sky svg {
+    color: var(--color-sky-deep);
+}
+
+.door-type-tile {
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+}
+
+.door-type-tile.is-active {
+    transform: translateY(-5px);
+    border-color: rgba(126, 214, 255, .85);
+    box-shadow:
+        0 0 0 3px rgba(126, 214, 255, .18),
+        0 26px 54px rgba(16, 18, 20, .16);
+}
+
+.door-type-tile.is-active svg {
+    transform: translateY(-3px) rotate(-4deg);
+}
+
+.door-type-tile:focus-visible {
+    outline: 3px solid rgba(126, 214, 255, .58);
+    outline-offset: 4px;
+}
+
+.door-types-showcase__photo img {
+    transition:
+        opacity 220ms ease,
+        transform 700ms ease;
+}
+
+.door-types-showcase__photo.is-changing img {
+    opacity: .44;
+    transform: scale(1.035);
+}
+
+.door-types-showcase__photo-label span {
+    transition: opacity var(--transition);
+}
+
+.door-types-note--eggplant .door-types-note__line {
+    background: var(--color-eggplant);
+}
+
+.door-types-note--eggplant svg {
+    color: var(--color-eggplant);
+}
+
+.door-types-note--sky .door-types-note__line {
+    background: var(--color-sky);
+}
+
+.door-types-note--sky svg {
+    color: var(--color-sky-deep);
+}
