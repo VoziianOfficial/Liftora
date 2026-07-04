@@ -1583,3 +1583,59 @@
         --orbit-size: 230px;
     }
 }
+
+@media (max-width: 992px) {
+    .request-translator__canvas {
+        grid-template-columns: 1fr;
+    }
+
+    .request-translator__side {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    .request-translator__side--raw,
+    .request-translator__side--clear {
+        padding-left: 0;
+        padding-right: 0;
+        border-left: 0;
+    }
+
+    .request-translator__center {
+        min-height: 280px;
+        border-left: 0;
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .request-translator__icon {
+        right: 50%;
+        top: auto;
+        bottom: -27px;
+        transform: translateX(50%) rotate(90deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .request-translator__head h2 {
+        font-size: 36px;
+    }
+
+    .request-translator__side p {
+        font-size: 25px;
+    }
+
+    .request-translator__photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .request-translator__switches {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .request-translator__switch {
+        justify-content: center;
+    }
+}

@@ -1448,3 +1448,41 @@
         return escapeHTML(value).replaceAll("`", "&#096;");
     }
 })();
+
+(function () {
+    document.addEventListener("DOMContentLoaded", initRequestTranslator);
+
+    function initRequestTranslator() {
+        const root = document.querySelector("[data-request-translator]");
+        if (!root) return;
+
+        const rawText = document.querySelector("[data-translator-raw]");
+        const clearText = document.querySelector("[data-translator-clear]");
+        const image = document.querySelector("[data-translator-image]");
+        const buttons = Array.from(document.querySelectorAll(".request-translator__switch"));
+
+        if (!rawText || !clearText || !image || !buttons.length) return;
+
+        buttons.forEach((button) => {
+            button.addEventListener("mouseenter", () => setTranslator(button));
+            button.addEventListener("click", () => setTranslator(button));
+            button.addEventListener("focus", () => setTranslator(button));
+        });
+
+        function setTranslator(button) {
+            buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+            root.classList.add("is-changing");
+
+            window.setTimeout(() => {
+                rawText.textContent = button.dataset.raw || "";
+                clearText.textContent = button.dataset.clear || "";
+
+                if (button.dataset.image) {
+                    image.src = button.dataset.image;
+                }
+
+                root.classList.remove("is-changing");
+            }, 140);
+        }
+    }
+})();

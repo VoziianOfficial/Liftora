@@ -274,6 +274,83 @@
             </div>
         </section>
 
+        <!-- Extra Section — Request Translator -->
+        <section class="section request-translator" id="request-translator" aria-labelledby="request-translator-title">
+            <div class="container-wide">
+                <div class="request-translator__head" data-animate>
+                    <p class="section-kicker">Request translator</p>
+                    <h2 id="request-translator-title">From vague concern to provider-ready request.</h2>
+                </div>
+        
+                <div class="request-translator__canvas" data-request-translator data-animate>
+                    <div class="request-translator__side request-translator__side--raw">
+                        <span class="request-translator__label">Homeowner says</span>
+                        <p data-translator-raw>“The garage door feels heavy and stops halfway.”</p>
+                    </div>
+        
+                    <div class="request-translator__center" aria-hidden="true">
+                        <div class="request-translator__photo">
+                            <img src="assets/images/service-repair.jpg" alt="" loading="lazy" data-translator-image>
+                        </div>
+        
+                        <div class="request-translator__icon">
+                            <i data-lucide="arrow-right-left"></i>
+                        </div>
+                    </div>
+        
+                    <div class="request-translator__side request-translator__side--clear">
+                        <span class="request-translator__label">Request becomes</span>
+                        <p data-translator-clear>
+                            Repair request with movement symptoms, timing notes, door behavior, and provider-supplied scope to
+                            review.
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="request-translator__switches" data-animate aria-label="Request translator categories">
+                    <button class="request-translator__switch is-active" type="button"
+                        data-raw="“The garage door feels heavy and stops halfway.”"
+                        data-clear="Repair request with movement symptoms, timing notes, door behavior, and provider-supplied scope to review."
+                        data-image="assets/images/service-repair.jpg">
+                        <i data-lucide="wrench"></i>
+                        <span>Repair</span>
+                    </button>
+        
+                    <button class="request-translator__switch" type="button"
+                        data-raw="“The old door looks damaged and I may need a new one.”"
+                        data-clear="Replacement request with current door condition, style preferences, insulation goals, and provider-supplied product terms."
+                        data-image="assets/images/service-replacement.jpg">
+                        <i data-lucide="replace"></i>
+                        <span>Replacement</span>
+                    </button>
+        
+                    <button class="request-translator__switch" type="button"
+                        data-raw="“The remote works sometimes, but the opener is acting strange.”"
+                        data-clear="Opener request with remote, keypad, motor, sensor, smart-control, and compatibility details to compare."
+                        data-image="assets/images/service-opener.jpg">
+                        <i data-lucide="radio-tower"></i>
+                        <span>Opener</span>
+                    </button>
+        
+                    <button class="request-translator__switch" type="button"
+                        data-raw="“I heard a snap and now the door barely opens.”"
+                        data-clear="Spring or cable request with safety-sensitive symptoms prepared for qualified provider evaluation."
+                        data-image="assets/images/service-springs.jpg">
+                        <i data-lucide="rotate-cw"></i>
+                        <span>Springs</span>
+                    </button>
+        
+                    <button class="request-translator__switch" type="button"
+                        data-raw="“The panel is dented and the door scrapes when moving.”"
+                        data-clear="Track, roller, or panel request with visible damage, alignment notes, scraping location, and repair-scope questions."
+                        data-image="assets/images/service-track-panel.jpg">
+                        <i data-lucide="panel-top"></i>
+                        <span>Panels</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Section 3 — What Liftora Is / Is Not -->
         <section class="section section-offwhite" id="what-liftora-is" aria-labelledby="what-liftora-is-title">
             <div class="container-wide">
