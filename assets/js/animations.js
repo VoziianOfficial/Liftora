@@ -126,3 +126,52 @@
         refreshAnimations();
     });
 })();
+
+(function () {
+    const parallaxLayers = document.querySelectorAll("[data-parallax-bg]");
+
+    if (!parallaxLayers.length) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isTouch = window.matchMedia("(max-width: 768px)").matches;
+
+    if (reduceMotion || isTouch) {
+        parallaxLayers.forEach((layer) => {
+            layer.style.transform = "translate3d(0, 0, 0)";
+        });
+        return;
+    }
+
+    let ticking = false;
+
+    function updateParallax() {
+        parallaxLayers.forEach((layer) => {
+            const section = layer.closest(".request-runway");
+            if (!section) return;
+
+            const rect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            if (rect.bottom < 0 || rect.top > windowHeight) return;
+
+            const progress = (windowHeight - rect.top) / (windowHeight + rect.height);
+            const movement = (progress - 0.5) * 90;
+
+            layer.style.transform = `translate3d(0, ${movement}px, 0)`;
+        });
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener("scroll", requestTick, { passive: true });
+    window.addEventListener("resize", requestTick);
+
+    updateParallax();
+})();
