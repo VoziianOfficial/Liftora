@@ -1561,3 +1561,140 @@
         observer.observe(zone);
     }
 })();
+
+(function () {
+    document.addEventListener("DOMContentLoaded", initSmoothServiceAccordionStable);
+
+    function initSmoothServiceAccordionStable() {
+        const groups = document.querySelectorAll("[data-service-accordion]");
+        if (!groups.length) return;
+
+        groups.forEach((group) => {
+            const items = Array.from(group.querySelectorAll(".service-accordion__item"));
+
+            items.forEach((item) => {
+                const summary = item.querySelector("summary");
+                const body = item.querySelector(".service-accordion__body");
+
+                if (!summary || !body) return;
+
+                item.dataset.animating = "false";
+
+                body.style.overflow = "hidden";
+                body.style.padding = "0";
+
+                if (item.open) {
+                    body.style.height = "auto";
+                    body.style.opacity = "1";
+                    body.style.transform = "translateY(0)";
+                } else {
+                    body.style.height = "0px";
+                    body.style.opacity = "0";
+                    body.style.transform = "translateY(-6px)";
+                }
+
+                summary.addEventListener("click", (event) => {
+                    event.preventDefault();
+
+                    if (item.dataset.animating === "true") return;
+
+                    const isOpen = item.open;
+
+                    if (isOpen) {
+                        closeItem(item, body);
+                        return;
+                    }
+
+                    items.forEach((otherItem) => {
+                        if (otherItem === item || !otherItem.open) return;
+
+                        const otherBody = otherItem.querySelector(".service-accordion__body");
+                        if (otherBody && otherItem.dataset.animating !== "true") {
+                            closeItem(otherItem, otherBody);
+                        }
+                    });
+
+                    openItem(item, body);
+                });
+            });
+        });
+    }
+
+    function openItem(item, body) {
+        item.dataset.animating = "true";
+        item.open = true;
+
+        body.style.transition = "none";
+        body.style.height = "0px";
+        body.style.opacity = "0";
+        body.style.transform = "translateY(-6px)";
+
+        requestAnimationFrame(() => {
+            const targetHeight = body.scrollHeight;
+
+            body.style.transition =
+                "height 520ms cubic-bezier(.22, .61, .36, 1), opacity 320ms ease, transform 520ms cubic-bezier(.22, .61, .36, 1)";
+
+            body.style.height = `${targetHeight}px`;
+            body.style.opacity = "1";
+            body.style.transform = "translateY(0)";
+
+            window.setTimeout(() => {
+                if (item.open) {
+                    body.style.height = "auto";
+                }
+
+                item.dataset.animating = "false";
+            }, 540);
+        });
+
+        refreshServiceAccordionIcons();
+    }
+
+    function closeItem(item, body) {
+        item.dataset.animating = "true";
+
+        const startHeight = body.scrollHeight;
+
+        body.style.transition = "none";
+        body.style.height = `${startHeight}px`;
+        body.style.opacity = "1";
+        body.style.transform = "translateY(0)";
+
+        requestAnimationFrame(() => {
+            body.style.transition =
+                "height 480ms cubic-bezier(.22, .61, .36, 1), opacity 260ms ease, transform 480ms cubic-bezier(.22, .61, .36, 1)";
+
+            body.style.height = "0px";
+            body.style.opacity = "0";
+            body.style.transform = "translateY(-6px)";
+        });
+
+        const finishClose = () => {
+            item.open = false;
+            item.dataset.animating = "false";
+            body.removeEventListener("transitionend", onTransitionEnd);
+        };
+
+        const onTransitionEnd = (event) => {
+            if (event.propertyName !== "height") return;
+            finishClose();
+        };
+
+        body.addEventListener("transitionend", onTransitionEnd);
+
+        window.setTimeout(() => {
+            if (item.dataset.animating === "true") {
+                finishClose();
+            }
+        }, 540);
+
+        refreshServiceAccordionIcons();
+    }
+
+    function refreshServiceAccordionIcons() {
+        if (window.lucide && typeof window.lucide.createIcons === "function") {
+            window.lucide.createIcons();
+        }
+    }
+})();
