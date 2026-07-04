@@ -4609,7 +4609,7 @@ h4 {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    background: var(--color-black);
+    background: transparent;
     color: var(--color-white);
 }
 
@@ -4617,7 +4617,7 @@ h4 {
 .request-runway__bg {
     position: absolute;
     inset: -14% 0;
-    z-index: -3;
+    z-index: 0;
     background:
         url("../images/cta-garage-door.jpg") center / cover no-repeat;
     transform: translate3d(0, 0, 0);
@@ -4628,7 +4628,7 @@ h4 {
 .request-runway__overlay {
     position: absolute;
     inset: 0;
-    z-index: -2;
+    z-index: 1;
     background: rgba(0, 0, 0, .62);
     pointer-events: none;
 }
@@ -4638,7 +4638,7 @@ h4 {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 2;
     background-image:
         linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
@@ -4652,6 +4652,7 @@ h4 {
     position: absolute;
     right: -18px;
     bottom: -42px;
+    z-index: 2;
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, .08);
     font-family: var(--font-heading);
@@ -4664,7 +4665,7 @@ h4 {
 
 .request-runway .container-wide {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .request-runway__layout {
