@@ -4849,3 +4849,277 @@ h4 {
         opacity: 1;
     }
 }
+
+/* ==========================================================================
+   Door Types Showcase
+   ========================================================================== */
+
+.door-types-showcase {
+    background: var(--color-white);
+}
+
+.door-types-showcase__cards {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 34px;
+}
+
+.door-type-tile {
+    position: relative;
+    overflow: hidden;
+    padding: 18px 16px;
+    border: 1px solid rgba(16, 18, 20, .10);
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    box-shadow: 0 16px 34px rgba(16, 18, 20, .07);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.door-type-tile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, .22) 42%, transparent 72%);
+    transform: translateX(-120%);
+    transition: transform .7s ease;
+    pointer-events: none;
+}
+
+.door-type-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 48px rgba(16, 18, 20, .12);
+}
+
+.door-type-tile:hover::after {
+    transform: translateX(120%);
+}
+
+.door-type-tile span {
+    display: block;
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .12em;
+    opacity: .72;
+}
+
+.door-type-tile h3 {
+    max-width: 120px;
+    font-size: 16px;
+    line-height: 1.12;
+    letter-spacing: -.035em;
+}
+
+.door-type-tile svg {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+.door-type-tile:hover svg {
+    transform: translateY(-3px) rotate(-4deg);
+}
+
+.door-type-tile--black {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.door-type-tile--black svg {
+    color: var(--color-sky);
+}
+
+.door-type-tile--eggplant {
+    background: var(--color-eggplant);
+    color: var(--color-white);
+}
+
+.door-type-tile--eggplant svg {
+    color: var(--color-sky);
+}
+
+.door-type-tile--sky {
+    background: var(--color-sky);
+    color: var(--color-black);
+}
+
+.door-type-tile--sky svg {
+    color: var(--color-eggplant);
+}
+
+.door-type-tile--gray {
+    background: var(--color-soft-gray);
+    color: var(--color-black);
+}
+
+.door-type-tile--gray svg {
+    color: var(--color-eggplant);
+}
+
+.door-type-tile--soft {
+    background: var(--color-offwhite);
+    color: var(--color-black);
+}
+
+.door-type-tile--soft svg {
+    color: var(--color-sky-deep);
+}
+
+.door-type-tile--outline {
+    background: var(--color-white);
+    color: var(--color-black);
+    border-color: rgba(50, 19, 51, .22);
+}
+
+.door-type-tile--outline svg {
+    color: var(--color-eggplant);
+}
+
+/* Wide photo */
+.door-types-showcase__photo {
+    position: relative;
+    overflow: hidden;
+    height: 360px;
+    margin-top: 18px;
+    border-radius: 28px;
+    background: var(--color-black);
+    box-shadow: 0 24px 60px rgba(16, 18, 20, .14);
+}
+
+.door-types-showcase__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    transition: transform 1s ease;
+}
+
+.door-types-showcase__photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .42);
+    pointer-events: none;
+}
+
+.door-types-showcase__photo:hover img {
+    transform: scale(1.06);
+}
+
+.door-types-showcase__photo-label {
+    position: absolute;
+    left: 24px;
+    bottom: 22px;
+    z-index: 2;
+    max-width: 440px;
+    padding: 13px 16px;
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 16px;
+    background: rgba(14, 15, 18, .54);
+    backdrop-filter: blur(14px);
+}
+
+.door-types-showcase__photo-label span {
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+/* Bottom two equal text columns */
+.door-types-showcase__notes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.door-types-note {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 34px;
+    gap: 18px;
+    align-items: start;
+    min-height: 188px;
+    padding: 28px 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-black);
+    transition:
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.door-types-note__line {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 78px;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--color-eggplant);
+    transition:
+        width var(--transition),
+        background var(--transition);
+}
+
+.door-types-note:nth-child(2) .door-types-note__line {
+    background: var(--color-sky);
+}
+
+.door-types-note p {
+    margin-bottom: 12px;
+    color: var(--color-muted);
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.door-types-note h3 {
+    max-width: 640px;
+    color: var(--color-black);
+    font-size: 22px;
+    line-height: 1.22;
+    letter-spacing: -.04em;
+}
+
+.door-types-note svg {
+    width: 30px;
+    height: 30px;
+    color: var(--color-eggplant);
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+.door-types-note:nth-child(2) svg {
+    color: var(--color-sky-deep);
+}
+
+.door-types-note:hover {
+    border-color: rgba(16, 18, 20, .28);
+    transform: translateY(-3px);
+}
+
+.door-types-note:hover .door-types-note__line {
+    width: 100%;
+}
+
+.door-types-note:hover svg {
+    transform: translate(4px, -4px);
+}
