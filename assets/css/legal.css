@@ -16,8 +16,8 @@ body:has(.legal-hero) {
 
 .legal-hero [data-animate],
 .legal-section [data-animate] {
-    opacity: 1;
-    transform: none;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 
@@ -598,8 +598,16 @@ main>.legal-section {
 }
 
 @media (max-width: 768px) {
+    .legal-sidebar,
+    .legal-content,
+    .legal-card {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
     .legal-hero {
-        padding: 72px 0 54px;
+        padding: 132px 0 54px;
         text-align: center;
     }
 
@@ -643,7 +651,7 @@ main>.legal-section {
 
 @media (max-width: 576px) {
     .legal-hero {
-        padding: 62px 0 48px;
+        padding: 118px 0 48px;
     }
 
     main>.legal-section {

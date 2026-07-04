@@ -83,6 +83,40 @@
 
 
 @media (max-width: 992px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body,
+    main,
+    .site-header,
+    .main-header,
+    .section,
+    .container,
+    .container-wide {
+        max-width: 100%;
+    }
+
+    .main-header__inner,
+    .site-logo,
+    .legal-layout,
+    .legal-sidebar,
+    .legal-content,
+    .contact-request-zone__split,
+    .contact-request-zone__media,
+    .contact-request-zone__form-wrap,
+    .faq-layout,
+    .service-overview__layout,
+    .provider-evaluate__grid,
+    .request-clarity-split__layout,
+    .before-after-doors__grid,
+    .request-runway__layout {
+        min-width: 0;
+    }
+
     :root {
         --section-y: 74px;
         --section-y-compact: 52px;
@@ -162,6 +196,10 @@
     .pre-header__links a span,
     .pre-header__links span span {
         display: none;
+    }
+
+    .contact-request-zone__media {
+        margin-left: 0;
     }
 
     .hero {
