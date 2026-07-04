@@ -7772,3 +7772,173 @@ h4 {
     --detail-bg: #F8F5FF;
     --detail-icon-color: #FFFFFF;
 }
+
+/* ==========================================================================
+   Service Shortcuts — big icon first / premium border hover
+   ========================================================================== */
+
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.shortcut-card {
+    --shortcut-accent: var(--color-sky);
+    --shortcut-bg: var(--color-white);
+    --shortcut-icon-color: var(--color-black);
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 82px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    min-height: 132px;
+    padding: 22px 24px;
+    border: 2px solid var(--shortcut-accent);
+    border-radius: 26px;
+    background: var(--shortcut-bg);
+    color: var(--color-black);
+    box-shadow:
+        0 16px 38px rgba(14, 15, 18, .07),
+        inset 0 0 0 1px rgba(255, 255, 255, .72);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background var(--transition),
+        color var(--transition);
+}
+
+/* убираем любые старые декоративные линии, если они были */
+.shortcut-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    z-index: -1;
+    width: 0;
+    background: var(--shortcut-accent);
+    opacity: .12;
+    transition: width var(--transition), opacity var(--transition);
+}
+
+.shortcut-card::after {
+    content: "";
+    position: absolute;
+    right: -44px;
+    bottom: -44px;
+    z-index: -1;
+    width: 142px;
+    height: 142px;
+    border: 2px solid var(--shortcut-accent);
+    border-radius: 999px;
+    opacity: .18;
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+.shortcut-card svg {
+    width: 68px;
+    height: 68px;
+    padding: 18px;
+    border-radius: 22px;
+    background: var(--shortcut-accent);
+    color: var(--shortcut-icon-color);
+    stroke-width: 2;
+    box-shadow:
+        0 12px 0 rgba(14, 15, 18, .055),
+        0 18px 34px rgba(14, 15, 18, .12);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        background var(--transition),
+        color var(--transition);
+}
+
+.shortcut-card strong {
+    position: relative;
+    z-index: 2;
+    display: block;
+    max-width: 210px;
+    color: var(--color-black);
+    font-family: var(--font-heading);
+    font-size: 21px;
+    font-weight: 850;
+    line-height: 1.08;
+    letter-spacing: -.045em;
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+.shortcut-card:hover {
+    transform: translateY(-7px);
+    background: var(--color-white);
+    border-color: var(--shortcut-accent);
+    color: var(--color-black);
+    box-shadow:
+        0 26px 64px rgba(14, 15, 18, .14),
+        0 0 0 5px rgba(126, 214, 255, .10);
+}
+
+.shortcut-card:hover::before {
+    width: 100%;
+    opacity: .14;
+}
+
+.shortcut-card:hover::after {
+    transform: scale(1.35) rotate(14deg);
+    opacity: .34;
+}
+
+.shortcut-card:hover svg {
+    transform: translateY(-5px) rotate(-5deg) scale(1.04);
+    box-shadow:
+        0 14px 0 rgba(14, 15, 18, .075),
+        0 26px 46px rgba(14, 15, 18, .16);
+}
+
+.shortcut-card:hover strong {
+    transform: translateX(4px);
+}
+
+/* разные акценты для 6 service shortcuts */
+
+.shortcut-card:nth-child(1) {
+    --shortcut-accent: #7ED6FF;
+    --shortcut-bg: #F4FBFF;
+    --shortcut-icon-color: #0E0F12;
+}
+
+.shortcut-card:nth-child(2) {
+    --shortcut-accent: #321333;
+    --shortcut-bg: #FBF6FC;
+    --shortcut-icon-color: #FFFFFF;
+}
+
+.shortcut-card:nth-child(3) {
+    --shortcut-accent: #FF8A3D;
+    --shortcut-bg: #FFF8F2;
+    --shortcut-icon-color: #0E0F12;
+}
+
+.shortcut-card:nth-child(4) {
+    --shortcut-accent: #8E5CFF;
+    --shortcut-bg: #F8F5FF;
+    --shortcut-icon-color: #FFFFFF;
+}
+
+.shortcut-card:nth-child(5) {
+    --shortcut-accent: #00B894;
+    --shortcut-bg: #F2FFFB;
+    --shortcut-icon-color: #0E0F12;
+}
+
+.shortcut-card:nth-child(6) {
+    --shortcut-accent: #2C95C7;
+    --shortcut-bg: #F2FAFF;
+    --shortcut-icon-color: #FFFFFF;
+}
