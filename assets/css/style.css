@@ -254,7 +254,7 @@ h6 {
     align-items: center;
     gap: 10px;
     margin-bottom: 13px;
-    color: var(--color-orange);
+    color: var(--color-orange-light);
     font-family: var(--font-heading);
     font-size: 12px;
     font-weight: 800;
