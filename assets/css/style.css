@@ -1,8 +1,4 @@
-/* ==========================================================================
-   Liftora — Independent Garage Door Matching Platform
-   File: assets/css/style.css
-   Core desktop/global styles
-   ========================================================================== */
+
 
 :root {
     --color-black: #0E0F12;
@@ -60,9 +56,7 @@
     --preheader-height: 36px;
 }
 
-/* ==========================================================================
-   Reset / base
-   ========================================================================== */
+
 
 *,
 *::before,
@@ -177,9 +171,7 @@ h6 {
     transform: translateY(0);
 }
 
-/* ==========================================================================
-   Layout helpers
-   ========================================================================== */
+
 
 .container {
     width: min(100% - 48px, var(--container));
@@ -376,9 +368,7 @@ h4 {
     display: none !important;
 }
 
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
+
 
 .btn {
     --btn-bg: var(--color-black);
@@ -541,9 +531,7 @@ h4 {
     align-items: center;
 }
 
-/* ==========================================================================
-   Header / navigation
-   ========================================================================== */
+
 
 .site-header {
     position: sticky;
@@ -832,9 +820,7 @@ h4 {
     transform: rotate(-45deg);
 }
 
-/* ==========================================================================
-   Mobile menu
-   ========================================================================== */
+
 
 .mobile-menu {
     position: fixed;
@@ -1037,9 +1023,7 @@ h4 {
     color: var(--color-orange);
 }
 
-/* ==========================================================================
-   Hero sections
-   ========================================================================== */
+
 
 .hero {
     position: relative;
@@ -1271,9 +1255,7 @@ h4 {
     color: var(--color-white);
 }
 
-/* ==========================================================================
-   Cards / media objects
-   ========================================================================== */
+
 
 .clean-card {
     position: relative;
@@ -1469,9 +1451,7 @@ h4 {
     border-radius: 0 0 18px 0;
 }
 
-/* ==========================================================================
-   Quick navigation / dynamic panels
-   ========================================================================== */
+
 
 .quick-nav {
     background: var(--color-offwhite);
@@ -1651,9 +1631,7 @@ h4 {
     color: var(--color-orange);
 }
 
-/* ==========================================================================
-   About / intro split sections
-   ========================================================================== */
+
 
 .about-intro__layout {
     display: grid;
@@ -1758,9 +1736,7 @@ h4 {
     font-weight: 500;
 }
 
-/* ==========================================================================
-   Popular services photo cards
-   ========================================================================== */
+
 
 .popular-services {
     background: var(--color-white);
@@ -1882,9 +1858,7 @@ h4 {
     opacity: 1;
 }
 
-/* ==========================================================================
-   Process cards
-   ========================================================================== */
+
 
 .process-section {
     overflow: hidden;
@@ -1965,9 +1939,7 @@ h4 {
     font-size: 14px;
 }
 
-/* ==========================================================================
-   Issue board / mosaic
-   ========================================================================== */
+
 
 .issue-board {
     background: var(--color-offwhite);
@@ -2080,9 +2052,7 @@ h4 {
     color: var(--color-orange-soft);
 }
 
-/* ==========================================================================
-   Comparison checklist / line lists
-   ========================================================================== */
+
 
 .compare-section__layout {
     display: grid;
@@ -2152,9 +2122,7 @@ h4 {
     gap: 0 28px;
 }
 
-/* ==========================================================================
-   Door types strip / marquee
-   ========================================================================== */
+
 
 .types-strip {
     overflow: hidden;
@@ -2228,9 +2196,7 @@ h4 {
     line-height: 1.2;
 }
 
-/* ==========================================================================
-   Platform clarity / compliance section
-   ========================================================================== */
+
 
 .platform-clarity__grid {
     display: grid;
@@ -2319,9 +2285,7 @@ h4 {
     flex: 0 0 auto;
 }
 
-/* ==========================================================================
-   FAQ
-   ========================================================================== */
+
 
 .faq-layout {
     display: grid;
@@ -2506,9 +2470,7 @@ h4 {
     color: rgba(255, 255, 255, .68);
 }
 
-/* ==========================================================================
-   Shared final CTA
-   ========================================================================== */
+
 
 .final-cta {
     background: var(--color-offwhite);
@@ -2603,9 +2565,7 @@ h4 {
     }
 }
 
-/* ==========================================================================
-   Dark icon strip / service marquee
-   ========================================================================== */
+
 
 .icon-strip {
     overflow: hidden;
@@ -2649,9 +2609,7 @@ h4 {
     animation-play-state: paused;
 }
 
-/* ==========================================================================
-   About page specific
-   ========================================================================== */
+
 
 .story-split__layout {
     display: grid;
@@ -2996,9 +2954,7 @@ h4 {
     letter-spacing: -.035em;
 }
 
-/* ==========================================================================
-   Slider / homeowner notes
-   ========================================================================== */
+
 
 .slider-shell {
     position: relative;
@@ -3081,9 +3037,7 @@ h4 {
     margin: auto;
 }
 
-/* ==========================================================================
-   Services page
-   ========================================================================== */
+
 
 .services-showcase__layout {
     display: grid;
@@ -3322,9 +3276,7 @@ h4 {
     font-weight: 700;
 }
 
-/* ==========================================================================
-   Contact page / forms
-   ========================================================================== */
+
 
 .contact-options {
     display: grid;
@@ -3682,9 +3634,7 @@ h4 {
     line-height: 1.25;
 }
 
-/* ==========================================================================
-   Service detail pages
-   ========================================================================== */
+
 
 .service-overview__layout {
     display: grid;
@@ -3826,9 +3776,7 @@ h4 {
     color: rgba(255, 255, 255, .72);
 }
 
-/* ==========================================================================
-   Cookie banner
-   ========================================================================== */
+
 
 .cookie-banner {
     position: fixed;
@@ -3876,9 +3824,7 @@ h4 {
     gap: 10px;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+
 
 .site-footer {
     background: var(--color-black);
@@ -4006,9 +3952,7 @@ h4 {
     color: var(--color-orange-soft);
 }
 
-/* ==========================================================================
-   Premium palette refresh
-   ========================================================================== */
+
 
 ::selection {
     background: var(--color-sky-soft);
@@ -4550,9 +4494,7 @@ h4 {
     color: var(--color-sky);
 }
 
-/* ==========================================================================
-   Animation utility classes
-   ========================================================================== */
+
 
 [data-animate],
 .reveal {
@@ -4593,9 +4535,7 @@ h4 {
     transition-delay: calc(var(--stagger-index, 0) * 75ms);
 }
 
-/* ==========================================================================
-   Utility states
-   ========================================================================== */
+
 
 .is-hidden {
     display: none !important;
@@ -4618,9 +4558,7 @@ h4 {
     background-color: var(--color-steel);
 }
 
-/* ==========================================================================
-   Reduced motion
-   ========================================================================== */
+
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -4646,9 +4584,7 @@ h4 {
 }
 
 
-/* ==========================================================================
-   Request Runway CTA
-   ========================================================================== */
+
 
 .request-runway {
     position: relative;
@@ -4658,7 +4594,7 @@ h4 {
     color: var(--color-white);
 }
 
-/* Parallax photo layer */
+
 .request-runway__bg {
     position: absolute;
     inset: -14% 0;
@@ -4669,7 +4605,7 @@ h4 {
     will-change: transform;
 }
 
-/* Medium black overlay */
+
 .request-runway__overlay {
     position: absolute;
     inset: 0;
@@ -4926,9 +4862,7 @@ h4 {
     }
 }
 
-/* ==========================================================================
-   Door Types Showcase
-   ========================================================================== */
+
 
 .door-types-showcase {
     background: var(--color-white);
@@ -5062,7 +4996,7 @@ h4 {
     color: var(--color-eggplant);
 }
 
-/* Wide photo */
+
 .door-types-showcase__photo {
     position: relative;
     overflow: hidden;
@@ -5115,7 +5049,7 @@ h4 {
     line-height: 1.35;
 }
 
-/* Bottom two equal text columns */
+
 .door-types-showcase__notes {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -5272,9 +5206,7 @@ h4 {
 }
 
 
-/* ==========================================================================
-   Premium Moving Line
-   ========================================================================== */
+
 
 .premium-flow {
     position: relative;
@@ -5475,9 +5407,7 @@ h4 {
     }
 }
 
-/* ==========================================================================
-   Request Clarity Split
-   ========================================================================== */
+
 
 .request-clarity-split {
     position: relative;
@@ -5746,9 +5676,7 @@ h4 {
 }
 
 
-/* ==========================================================================
-   Request Orbit Journey
-   ========================================================================== */
+
 
 .request-orbit {
     position: relative;
@@ -6001,9 +5929,7 @@ h4 {
     }
 }
 
-/* ==========================================================================
-   Platform Standards — vivid borders / hover refresh
-   ========================================================================== */
+
 
 .standards-grid {
     align-items: stretch;
@@ -6113,9 +6039,7 @@ h4 {
 }
 
 
-/* ==========================================================================
-   Request Translator
-   ========================================================================== */
+
 
 .request-translator {
     position: relative;
@@ -6348,9 +6272,7 @@ h4 {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   Garage Request Puzzle
-   ========================================================================== */
+
 
 .garage-request-puzzle {
     position: relative;
@@ -6514,7 +6436,7 @@ h4 {
     transform: translateY(-5px) rotate(-5deg);
 }
 
-/* Photo cards */
+
 
 .garage-puzzle-card--photo {
     padding: 0;
@@ -6559,7 +6481,7 @@ h4 {
     color: var(--color-white);
 }
 
-/* Positions — 6 cards only */
+
 
 .garage-puzzle-card--intro {
     grid-column: 1 / 5;
@@ -6614,9 +6536,7 @@ h4 {
     --puzzle-accent: var(--color-sky);
 }
 
-/* ==========================================================================
-   Before / After Request View
-   ========================================================================== */
+
 
 .before-after-doors {
     position: relative;
@@ -6873,9 +6793,7 @@ h4 {
     border-color: var(--color-white);
 }
 
-/* ==========================================================================
-   Contact Options — brighter cards
-   ========================================================================== */
+
 
 .contact-options {
     align-items: stretch;
@@ -6970,7 +6888,7 @@ h4 {
     transform: translateY(-4px) rotate(-4deg) scale(1.08);
 }
 
-/* Different bright accents */
+
 
 .contact-option:nth-child(1) {
     --contact-accent: #7ED6FF;
@@ -6992,9 +6910,7 @@ h4 {
     --contact-bg: #F8F5FF;
 }
 
-/* ==========================================================================
-   Contact Request Zone
-   ========================================================================== */
+
 
 .contact-request-zone {
     position: relative;
@@ -7310,9 +7226,7 @@ h4 {
     --stat-accent: #8E5CFF;
 }
 
-/* ==========================================================================
-   Request Focus Orb
-   ========================================================================== */
+
 
 .request-focus-orb {
     position: relative;
@@ -7586,9 +7500,7 @@ h4 {
     transform: translate(4px, -4px);
 }
 
-/* ==========================================================================
-   Contact Details — premium ticket style
-   ========================================================================== */
+
 
 .contact-details-list {
     display: grid;
@@ -7622,7 +7534,7 @@ h4 {
         background var(--transition);
 }
 
-/* убираем старую верхнюю линию, если она была */
+
 .contact-details-list li::before {
     content: "";
     position: absolute;
@@ -7747,7 +7659,7 @@ h4 {
     color: var(--color-black);
 }
 
-/* разные акценты */
+
 
 .contact-details-list li:nth-child(1) {
     --detail-accent: #7ED6FF;
@@ -7773,9 +7685,7 @@ h4 {
     --detail-icon-color: #FFFFFF;
 }
 
-/* ==========================================================================
-   Service Shortcuts — big icon first / premium border hover
-   ========================================================================== */
+
 
 .shortcut-grid {
     display: grid;
@@ -7812,7 +7722,7 @@ h4 {
         color var(--transition);
 }
 
-/* убираем любые старые декоративные линии, если они были */
+
 .shortcut-card::before {
     content: "";
     position: absolute;
@@ -7905,7 +7815,7 @@ h4 {
     transform: translateX(4px);
 }
 
-/* разные акценты для 6 service shortcuts */
+
 
 .shortcut-card:nth-child(1) {
     --shortcut-accent: #7ED6FF;
@@ -7943,9 +7853,7 @@ h4 {
     --shortcut-icon-color: #FFFFFF;
 }
 
-/* ==========================================================================
-   Provider Checklist — hover lines / active rows
-   ========================================================================== */
+
 
 #provider-checklist .check-grid {
     gap: 12px;
@@ -7969,7 +7877,7 @@ h4 {
         background var(--transition);
 }
 
-/* мягкая цветная заливка сбоку, не линия над иконкой */
+
 #provider-checklist .line-list__item::before {
     content: "";
     position: absolute;
@@ -7980,7 +7888,7 @@ h4 {
     transition: width var(--transition), opacity var(--transition);
 }
 
-/* нижняя hover-линия */
+
 #provider-checklist .line-list__item::after {
     content: "";
     position: absolute;
@@ -8061,7 +7969,7 @@ h4 {
     color: rgba(14, 15, 18, .72);
 }
 
-/* разные акценты */
+
 
 #provider-checklist .line-list__item:nth-child(1) {
     --check-accent: #7ED6FF;
@@ -8108,9 +8016,7 @@ h4 {
     }
 }
 
-/* ==========================================================================
-   Request Briefing — combined prep + questions section
-   ========================================================================== */
+
 
 .request-briefing {
     position: relative;
@@ -8166,7 +8072,7 @@ h4 {
     margin-top: 28px;
 }
 
-/* clean list, not nested cards */
+
 
 .request-briefing__list {
     display: grid;
@@ -8281,7 +8187,7 @@ h4 {
     color: var(--color-black);
 }
 
-/* accents */
+
 
 .request-briefing__list .line-list__item:nth-child(1) {
     --brief-accent: #7ED6FF;
@@ -8307,7 +8213,7 @@ h4 {
     --brief-accent: #2C95C7;
 }
 
-/* middle wide photo */
+
 
 .request-briefing__photo {
     position: relative;
@@ -8406,7 +8312,7 @@ h4 {
     filter: saturate(1.08) contrast(1.04);
 }
 
-/* bottom block slightly different rhythm */
+
 
 .request-briefing__block--bottom .request-briefing__text {
     order: 2;
@@ -8421,9 +8327,7 @@ h4 {
     min-height: 76px;
 }
 
-/* ==========================================================================
-   Service Fit Snapshot
-   ========================================================================== */
+
 
 .service-fit-snapshot {
     position: relative;
@@ -8633,9 +8537,7 @@ h4 {
 }
 
 
-/* ==========================================================================
-   Other Service Circles
-   ========================================================================== */
+
 
 .other-service-circles {
     position: relative;
@@ -8808,7 +8710,7 @@ h4 {
     transform: translateY(-3px);
 }
 
-/* circle accents */
+
 
 .other-service-circle:nth-child(1) {
     --circle-accent: #7ED6FF;
@@ -8867,9 +8769,7 @@ h4 {
     transform: translate(4px, -4px);
 }
 
-/* ==========================================================================
-   Service Request Accordion
-   ========================================================================== */
+
 
 .service-accordion {
     position: relative;
@@ -9083,7 +8983,7 @@ h4 {
     line-height: 1.72;
 }
 
-/* accents */
+
 
 .service-accordion__item:nth-child(1) {
     --accordion-accent: #7ED6FF;

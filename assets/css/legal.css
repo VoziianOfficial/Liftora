@@ -1,12 +1,6 @@
-/* ==========================================================================
-   Liftora — Independent Garage Door Matching Platform
-   File: assets/css/legal.css
-   Privacy Policy / Terms / Cookie Policy page styles
-   ========================================================================== */
 
-/* ==========================================================================
-   Legal page base
-   ========================================================================== */
+
+
 
 body {
     background: var(--color-offwhite);
@@ -20,9 +14,7 @@ body:has(.legal-hero) {
     background: var(--color-offwhite);
 }
 
-/* ==========================================================================
-   Legal hero
-   ========================================================================== */
+
 
 .legal-hero {
     position: relative;
@@ -76,7 +68,7 @@ body:has(.legal-hero) {
     color: var(--color-orange);
 }
 
-/* Hero meta row */
+
 .legal-meta {
     display: flex;
     align-items: center;
@@ -111,9 +103,7 @@ body:has(.legal-hero) {
     flex: 0 0 auto;
 }
 
-/* ==========================================================================
-   Legal main layout
-   ========================================================================== */
+
 
 main>.legal-section {
     padding: 74px 0 86px;
@@ -128,9 +118,7 @@ main>.legal-section {
     align-items: start;
 }
 
-/* ==========================================================================
-   Sidebar / table of contents
-   ========================================================================== */
+
 
 .legal-sidebar {
     position: sticky;
@@ -192,9 +180,7 @@ main>.legal-section {
     transform: translateX(3px);
 }
 
-/* ==========================================================================
-   Legal content wrapper
-   ========================================================================== */
+
 
 .legal-content {
     overflow: hidden;
@@ -204,9 +190,7 @@ main>.legal-section {
     box-shadow: var(--shadow-soft);
 }
 
-/* ==========================================================================
-   Legal cards / content sections
-   ========================================================================== */
+
 
 .legal-card {
     position: relative;
@@ -264,7 +248,7 @@ main>.legal-section {
     text-decoration-color: currentColor;
 }
 
-/* Lists inside legal cards */
+
 .legal-card ul {
     display: grid;
     gap: 11px;
@@ -293,7 +277,7 @@ main>.legal-section {
     background: var(--color-orange);
 }
 
-/* Notice / disclaimer card */
+
 .legal-card--notice {
     overflow: hidden;
     border-bottom: 0;
@@ -319,9 +303,7 @@ main>.legal-section {
     color: rgba(255, 255, 255, .72);
 }
 
-/* ==========================================================================
-   Legal contact list
-   ========================================================================== */
+
 
 .legal-contact-list {
     display: grid;
@@ -367,9 +349,7 @@ main>.legal-section {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   Cookie page legal note
-   ========================================================================== */
+
 
 .legal-note {
     display: grid;
@@ -393,9 +373,7 @@ main>.legal-section {
     margin: 0;
 }
 
-/* ==========================================================================
-   Optional legal components
-   ========================================================================== */
+
 
 .legal-grid {
     display: grid;
@@ -479,9 +457,7 @@ main>.legal-section {
     border-bottom: 0;
 }
 
-/* ==========================================================================
-   Legal footer link improvement
-   ========================================================================== */
+
 
 .footer-legal {
     display: flex;
@@ -490,9 +466,7 @@ main>.legal-section {
     gap: 14px;
 }
 
-/* ==========================================================================
-   Premium palette refresh
-   ========================================================================== */
+
 
 .legal-hero::after {
     background: linear-gradient(90deg, rgba(14, 15, 18, .82), rgba(14, 15, 18, .44) 56%, rgba(14, 15, 18, .82));
@@ -581,9 +555,7 @@ main>.legal-section {
     background: var(--color-black);
 }
 
-/* ==========================================================================
-   Responsive
-   ========================================================================== */
+
 
 @media (max-width: 1100px) {
     .legal-layout {

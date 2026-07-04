@@ -1,10 +1,6 @@
 "use strict";
 
-/* ==========================================================================
-   Liftora — Independent Garage Door Matching Platform
-   File: assets/js/animations.js
-   Safe reveal animations without layout shift
-   ========================================================================== */
+
 
 (function () {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");

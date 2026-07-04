@@ -1,10 +1,6 @@
 "use strict";
 
-/* ==========================================================================
-   Liftora — Independent Garage Door Matching Platform
-   File: assets/js/forms.js
-   Contact form validation + AJAX submit
-   ========================================================================== */
+
 
 (function () {
     const CONFIG = window.LIFTORA_CONFIG || {};

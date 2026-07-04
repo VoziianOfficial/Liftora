@@ -2,11 +2,7 @@
 
 declare(strict_types=1);
 
-/**
- * Liftora — Independent Garage Door Matching Platform
- * File: contact.php
- * Handles contact/request form submissions and returns JSON.
- */
+
 
 ini_set('display_errors', '0');
 ini_set('log_errors', '1');
@@ -72,11 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     ], 405);
 }
 
-/**
- * Honeypot field.
- * Bots often fill hidden fields. If this is filled, return a generic success
- * without sending mail so real users are not exposed to anti-spam details.
- */
+
 $website = clean_text($_POST['website'] ?? '', 300);
 
 if ($website !== '') {
@@ -144,10 +136,7 @@ if (!empty($errors)) {
     ], 422);
 }
 
-/**
- * Change this email to the real receiving inbox when the site is deployed.
- * It should match the brand email configured in assets/js/config.js.
- */
+
 $recipient = 'support@liftora.com';
 
 $subject = 'New Liftora Garage Door Request';
