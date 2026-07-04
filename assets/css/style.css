@@ -6872,3 +6872,122 @@ h4 {
     color: var(--color-eggplant);
     border-color: var(--color-white);
 }
+
+/* ==========================================================================
+   Contact Options — brighter cards
+   ========================================================================== */
+
+.contact-options {
+    align-items: stretch;
+}
+
+.contact-option {
+    --contact-accent: var(--color-sky);
+    --contact-bg: var(--color-white);
+
+    position: relative;
+    overflow: hidden;
+    min-height: 190px;
+    border: 2px solid var(--contact-accent);
+    background: var(--contact-bg);
+    box-shadow:
+        0 14px 34px rgba(14, 15, 18, .07),
+        0 0 0 0 rgba(126, 214, 255, 0);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.contact-option::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    width: 54px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--contact-accent);
+    transition: width var(--transition);
+}
+
+.contact-option::after {
+    content: "";
+    position: absolute;
+    right: -38px;
+    bottom: -38px;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--contact-accent);
+    border-radius: 999px;
+    opacity: .18;
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+.contact-option i,
+.contact-option svg {
+    position: relative;
+    z-index: 2;
+    color: var(--contact-accent);
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+.contact-option h3,
+.contact-option p {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-option h3 {
+    transition: color var(--transition);
+}
+
+.contact-option:hover {
+    transform: translateY(-7px);
+    border-color: var(--contact-accent);
+    background: var(--color-white);
+    box-shadow:
+        0 22px 52px rgba(14, 15, 18, .13),
+        0 0 0 5px rgba(126, 214, 255, .12);
+}
+
+.contact-option:hover::before {
+    width: calc(100% - 36px);
+}
+
+.contact-option:hover::after {
+    transform: scale(1.35) rotate(14deg);
+    opacity: .34;
+}
+
+.contact-option:hover i,
+.contact-option:hover svg {
+    transform: translateY(-4px) rotate(-4deg) scale(1.08);
+}
+
+/* Different bright accents */
+
+.contact-option:nth-child(1) {
+    --contact-accent: #7ED6FF;
+    --contact-bg: #F4FBFF;
+}
+
+.contact-option:nth-child(2) {
+    --contact-accent: #321333;
+    --contact-bg: #FBF6FC;
+}
+
+.contact-option:nth-child(3) {
+    --contact-accent: #FF8A3D;
+    --contact-bg: #FFF8F2;
+}
+
+.contact-option:nth-child(4) {
+    --contact-accent: #8E5CFF;
+    --contact-bg: #F8F5FF;
+}
