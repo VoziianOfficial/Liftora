@@ -7309,3 +7309,466 @@ h4 {
 .contact-request-stat:nth-child(4) {
     --stat-accent: #8E5CFF;
 }
+
+/* ==========================================================================
+   Request Focus Orb
+   ========================================================================== */
+
+.request-focus-orb {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-offwhite);
+    color: var(--color-black);
+}
+
+.request-focus-orb::before {
+    content: "FOCUS";
+    position: absolute;
+    right: -20px;
+    top: 42px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(14, 15, 18, .055);
+    font-family: var(--font-heading);
+    font-size: clamp(100px, 15vw, 230px);
+    font-weight: 900;
+    letter-spacing: -.09em;
+    line-height: .8;
+    pointer-events: none;
+}
+
+.request-focus-orb__layout {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(420px, .9fr) minmax(0, 1fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.request-focus-orb__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.request-focus-orb__circle {
+    position: relative;
+    width: min(46vw, 560px);
+    aspect-ratio: 1 / 1;
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--color-black);
+    box-shadow:
+        0 28px 0 rgba(50, 19, 51, .08),
+        0 46px 100px rgba(14, 15, 18, .18);
+    isolation: isolate;
+}
+
+.request-focus-orb__circle::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, .26);
+    border-radius: inherit;
+    pointer-events: none;
+    transition:
+        inset var(--transition),
+        border-color var(--transition);
+}
+
+.request-focus-orb__circle::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .52)),
+        linear-gradient(90deg, rgba(50, 19, 51, .54), rgba(0, 0, 0, .10) 62%);
+    pointer-events: none;
+}
+
+.request-focus-orb__circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.04);
+    transition:
+        transform 900ms var(--ease),
+        filter 900ms var(--ease);
+}
+
+.request-focus-orb__circle:hover img {
+    transform: scale(1.1);
+    filter: saturate(1.08) contrast(1.04);
+}
+
+.request-focus-orb__circle:hover::before {
+    inset: 28px;
+    border-color: rgba(126, 214, 255, .58);
+}
+
+.request-focus-orb__badge {
+    position: absolute;
+    left: 50%;
+    bottom: 44px;
+    z-index: 4;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 82%;
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, .20);
+    border-radius: 999px;
+    background: rgba(14, 15, 18, .54);
+    backdrop-filter: blur(14px);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition);
+}
+
+.request-focus-orb__badge svg {
+    width: 18px;
+    height: 18px;
+    color: var(--color-sky);
+    flex: 0 0 auto;
+}
+
+.request-focus-orb__circle:hover .request-focus-orb__badge {
+    transform: translateX(-50%) translateY(-5px);
+    background: var(--color-sky);
+    color: var(--color-black);
+}
+
+.request-focus-orb__circle:hover .request-focus-orb__badge svg {
+    color: var(--color-black);
+}
+
+.request-focus-orb__content h2 {
+    max-width: 760px;
+    font-size: clamp(36px, 4.2vw, 66px);
+    line-height: .96;
+    letter-spacing: -.075em;
+}
+
+.request-focus-orb__content>p {
+    max-width: 670px;
+    margin-top: 22px;
+    color: var(--color-muted);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.request-focus-orb__lines {
+    display: grid;
+    margin-top: 34px;
+    border-top: 1px solid var(--color-border);
+}
+
+.request-focus-orb__lines div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 52px minmax(140px, .42fr) minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    min-height: 88px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+    transition:
+        padding var(--transition),
+        background var(--transition);
+}
+
+.request-focus-orb__lines div::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 72px;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--line-accent, var(--color-sky));
+    transform: scaleX(.28);
+    transform-origin: left;
+    transition: transform var(--transition), width var(--transition);
+}
+
+.request-focus-orb__lines div:nth-child(1) {
+    --line-accent: var(--color-sky);
+}
+
+.request-focus-orb__lines div:nth-child(2) {
+    --line-accent: var(--color-eggplant);
+}
+
+.request-focus-orb__lines div:nth-child(3) {
+    --line-accent: #FF8A3D;
+}
+
+.request-focus-orb__lines div:hover {
+    padding-left: 18px;
+    background: rgba(255, 255, 255, .62);
+}
+
+.request-focus-orb__lines div:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+}
+
+.request-focus-orb__lines span {
+    color: var(--line-accent, var(--color-sky));
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+}
+
+.request-focus-orb__lines strong {
+    color: var(--color-black);
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.request-focus-orb__lines small {
+    max-width: 480px;
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.request-focus-orb__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    color: var(--color-black);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.request-focus-orb__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 42%;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--color-sky-deep);
+    transition: width var(--transition);
+}
+
+.request-focus-orb__link svg {
+    width: 17px;
+    height: 17px;
+    color: var(--color-sky-deep);
+    transition: transform var(--transition);
+}
+
+.request-focus-orb__link:hover::after {
+    width: 100%;
+}
+
+.request-focus-orb__link:hover svg {
+    transform: translate(4px, -4px);
+}
+
+/* ==========================================================================
+   Contact Details — premium ticket style
+   ========================================================================== */
+
+.contact-details-list {
+    display: grid;
+    gap: 16px;
+}
+
+.contact-details-list li {
+    --detail-accent: var(--color-sky);
+    --detail-bg: var(--color-white);
+    --detail-icon-color: var(--color-black);
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    min-height: 118px;
+    padding: 20px 24px 20px 20px;
+    border: 1px solid rgba(14, 15, 18, .10);
+    border-radius: 26px;
+    background: var(--detail-bg);
+    box-shadow:
+        0 16px 38px rgba(14, 15, 18, .075),
+        inset 0 0 0 1px rgba(255, 255, 255, .75);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+/* убираем старую верхнюю линию, если она была */
+.contact-details-list li::before {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: -10px;
+    z-index: -1;
+    color: rgba(14, 15, 18, .045);
+    font-family: var(--font-heading);
+    font-size: 82px;
+    font-weight: 900;
+    letter-spacing: -.08em;
+    line-height: .8;
+    pointer-events: none;
+    background: none;
+    width: auto;
+    height: auto;
+    border: 0;
+}
+
+.contact-details-list li:nth-child(1)::before {
+    content: "01";
+}
+
+.contact-details-list li:nth-child(2)::before {
+    content: "02";
+}
+
+.contact-details-list li:nth-child(3)::before {
+    content: "03";
+}
+
+.contact-details-list li:nth-child(4)::before {
+    content: "04";
+}
+
+.contact-details-list li::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    z-index: -1;
+    width: 0;
+    background: var(--detail-accent);
+    opacity: .10;
+    transition: width var(--transition), opacity var(--transition);
+}
+
+.contact-details-list li>i,
+.contact-details-list li>svg {
+    width: 60px;
+    height: 60px;
+    padding: 17px;
+    border-radius: 21px;
+    background: var(--detail-accent);
+    color: var(--detail-icon-color);
+    box-shadow:
+        0 12px 0 rgba(14, 15, 18, .055),
+        0 18px 34px rgba(14, 15, 18, .12);
+    stroke-width: 2;
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        background var(--transition),
+        color var(--transition);
+}
+
+.contact-details-list li>span {
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-details-list li strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-black);
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.15;
+    letter-spacing: -.025em;
+    transition: color var(--transition);
+}
+
+.contact-details-list li a,
+.contact-details-list li span span {
+    display: inline-block;
+    max-width: 100%;
+    color: var(--color-muted);
+    font-size: 15px;
+    line-height: 1.45;
+    word-break: break-word;
+    transition: color var(--transition);
+}
+
+.contact-details-list li:hover {
+    transform: translateY(-7px);
+    border-color: var(--detail-accent);
+    background: var(--color-white);
+    box-shadow:
+        0 24px 58px rgba(14, 15, 18, .14),
+        0 0 0 5px rgba(126, 214, 255, .10);
+}
+
+.contact-details-list li:hover::after {
+    width: 100%;
+    opacity: .13;
+}
+
+.contact-details-list li:hover>i,
+.contact-details-list li:hover>svg {
+    transform: translateY(-5px) rotate(-5deg);
+    box-shadow:
+        0 14px 0 rgba(14, 15, 18, .075),
+        0 24px 44px rgba(14, 15, 18, .16);
+}
+
+.contact-details-list li:hover strong {
+    color: var(--color-black);
+}
+
+.contact-details-list li:hover a,
+.contact-details-list li:hover span span {
+    color: var(--color-black);
+}
+
+/* разные акценты */
+
+.contact-details-list li:nth-child(1) {
+    --detail-accent: #7ED6FF;
+    --detail-bg: #F4FBFF;
+    --detail-icon-color: #0E0F12;
+}
+
+.contact-details-list li:nth-child(2) {
+    --detail-accent: #321333;
+    --detail-bg: #FBF6FC;
+    --detail-icon-color: #FFFFFF;
+}
+
+.contact-details-list li:nth-child(3) {
+    --detail-accent: #FF8A3D;
+    --detail-bg: #FFF8F2;
+    --detail-icon-color: #0E0F12;
+}
+
+.contact-details-list li:nth-child(4) {
+    --detail-accent: #8E5CFF;
+    --detail-bg: #F8F5FF;
+    --detail-icon-color: #FFFFFF;
+}
