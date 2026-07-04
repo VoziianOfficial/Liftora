@@ -3474,8 +3474,9 @@ h4 {
 
 .contact-details-list {
     display: grid;
-    gap: 0;
-    border-top: 1px solid var(--color-border);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    border-top: 0;
 }
 
 .contact-details-list li {
@@ -3483,8 +3484,12 @@ h4 {
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 14px;
     align-items: start;
-    padding: 22px 0;
-    border-bottom: 1px solid var(--color-border);
+    min-height: 124px;
+    padding: 22px;
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    background: var(--color-white);
+    box-shadow: 0 12px 30px rgba(16, 18, 20, .05);
 }
 
 .contact-details-list svg {

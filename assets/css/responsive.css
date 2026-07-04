@@ -863,6 +863,10 @@
         grid-column: auto;
     }
 
+    .contact-details-list {
+        grid-template-columns: 1fr;
+    }
+
     .contact-details-list li {
         grid-template-columns: 34px minmax(0, 1fr);
     }
