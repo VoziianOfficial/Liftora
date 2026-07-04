@@ -5225,3 +5225,207 @@ h4 {
 .door-types-note--sky svg {
     color: var(--color-sky-deep);
 }
+
+
+/* ==========================================================================
+   Premium Moving Line
+   ========================================================================== */
+
+.premium-flow {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding-top: 84px;
+    padding-bottom: 84px;
+}
+
+.premium-flow::before {
+    content: "LIFTORA";
+    position: absolute;
+    right: -26px;
+    top: 18px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(14, 15, 18, .055);
+    font-family: var(--font-heading);
+    font-size: clamp(96px, 15vw, 230px);
+    font-weight: 900;
+    letter-spacing: -.09em;
+    line-height: .8;
+    pointer-events: none;
+}
+
+.premium-flow__head {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .46fr);
+    gap: 42px;
+    align-items: end;
+    margin-bottom: 42px;
+}
+
+.premium-flow__head h2 {
+    max-width: 820px;
+    font-size: clamp(34px, 3.8vw, 58px);
+    line-height: 1;
+    letter-spacing: -.065em;
+}
+
+.premium-flow__head>p {
+    max-width: 520px;
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.premium-flow__belt {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+    padding: 18px 0;
+    background: var(--color-black);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .10),
+        inset 0 -1px 0 rgba(255, 255, 255, .08),
+        0 26px 70px rgba(14, 15, 18, .18);
+}
+
+.premium-flow__belt::before,
+.premium-flow__belt::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 12vw;
+    height: 100%;
+    pointer-events: none;
+}
+
+.premium-flow__belt::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--color-black), transparent);
+}
+
+.premium-flow__belt::after {
+    right: 0;
+    background: linear-gradient(270deg, var(--color-black), transparent);
+}
+
+.premium-flow__track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    min-width: 200%;
+    animation: premiumFlowMove 34s linear infinite;
+}
+
+.premium-flow__belt:hover .premium-flow__track {
+    animation-play-state: paused;
+}
+
+.premium-flow__track span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 26px;
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: clamp(32px, 4.8vw, 74px);
+    font-weight: 900;
+    line-height: .92;
+    letter-spacing: -.075em;
+    white-space: nowrap;
+    text-shadow:
+        0 3px 0 rgba(126, 214, 255, .16),
+        0 16px 30px rgba(0, 0, 0, .34);
+}
+
+.premium-flow__track span:nth-of-type(even) {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, .62);
+    text-shadow: none;
+}
+
+.premium-flow__track i,
+.premium-flow__track svg {
+    width: clamp(28px, 3.6vw, 50px);
+    height: clamp(28px, 3.6vw, 50px);
+    margin-inline: 4px;
+    color: var(--color-sky);
+    stroke-width: 1.9;
+    filter: drop-shadow(0 10px 18px rgba(126, 214, 255, .22));
+    flex: 0 0 auto;
+}
+
+.premium-flow__bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.premium-flow__bottom a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 13px 18px;
+    border-bottom: 1px solid rgba(14, 15, 18, .18);
+    color: var(--color-black);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 850;
+    transition:
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.premium-flow__bottom a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 34%;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--color-eggplant);
+    transition: width var(--transition), background var(--transition);
+}
+
+.premium-flow__bottom a:nth-child(2)::after {
+    background: var(--color-sky-deep);
+}
+
+.premium-flow__bottom a:hover {
+    color: var(--color-eggplant);
+    transform: translateY(-2px);
+}
+
+.premium-flow__bottom a:hover::after {
+    width: 100%;
+}
+
+.premium-flow__bottom svg {
+    width: 17px;
+    height: 17px;
+    transition: transform var(--transition);
+}
+
+.premium-flow__bottom a:hover svg {
+    transform: translate(4px, -4px);
+}
+
+@keyframes premiumFlowMove {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
