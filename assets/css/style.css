@@ -9229,3 +9229,288 @@ main>.hero:first-child {
 .header-actions {
     align-self: center;
 }
+
+.hero-service-orbit {
+    position: relative;
+    z-index: 4;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--color-black);
+    color: var(--color-white);
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.hero-service-orbit__inner {
+    display: grid;
+    grid-template-columns: minmax(185px, .42fr) minmax(0, 1.36fr) minmax(245px, .58fr);
+    align-items: stretch;
+    min-height: 122px;
+}
+
+.hero-service-orbit__title {
+    display: flex;
+    align-items: center;
+    max-width: 210px;
+    color: rgba(255, 255, 255, .9);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: -.01em;
+}
+
+.hero-service-orbit__nav {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: stretch;
+    border-left: 1px solid rgba(255, 255, 255, .12);
+}
+
+.hero-service-orbit__link {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    min-height: 122px;
+    padding: 18px 12px;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 255, 255, .12);
+    color: rgba(255, 255, 255, .82);
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    transition:
+        color var(--transition),
+        background var(--transition);
+}
+
+.hero-service-orbit__link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(180deg, rgba(126, 214, 255, .11), transparent 64%),
+        rgba(50, 19, 51, .34);
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.hero-service-orbit__link::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 0;
+    left: 18px;
+    height: 3px;
+    border-radius: 999px 999px 0 0;
+    background: var(--color-sky);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition);
+}
+
+.hero-service-orbit__text,
+.hero-service-orbit__mark {
+    grid-area: 1 / 1;
+}
+
+.hero-service-orbit__text {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+.hero-service-orbit__mark {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    width: 118px;
+    height: 118px;
+    opacity: 0;
+    transform: scale(.72);
+    transform-origin: 50% 50%;
+    pointer-events: none;
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
+}
+
+.hero-service-orbit__mark>svg[data-lucide] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    width: 27px;
+    height: 27px;
+    color: var(--color-white);
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+    stroke-width: 1.8;
+}
+
+.hero-service-orbit__ring {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    width: 118px;
+    height: 118px;
+    max-width: none;
+    overflow: visible;
+    color: rgba(126, 214, 255, .52);
+    transform-origin: 50% 50%;
+    animation: liftoraOrbitSpin 7s linear infinite;
+}
+
+.hero-service-orbit__guide {
+    fill: none;
+    stroke: rgba(126, 214, 255, .18);
+    stroke-width: 1;
+    stroke-dasharray: 2 8;
+}
+
+.hero-service-orbit__ring text {
+    fill: currentColor;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.hero-service-orbit__link:hover,
+.hero-service-orbit__link:focus-visible {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, .035);
+}
+
+.hero-service-orbit__link:hover::before,
+.hero-service-orbit__link:focus-visible::before {
+    opacity: 1;
+}
+
+.hero-service-orbit__link:hover::after,
+.hero-service-orbit__link:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.hero-service-orbit__link:hover .hero-service-orbit__text,
+.hero-service-orbit__link:focus-visible .hero-service-orbit__text {
+    opacity: 0;
+    transform: scale(.72);
+}
+
+.hero-service-orbit__link:hover .hero-service-orbit__mark,
+.hero-service-orbit__link:focus-visible .hero-service-orbit__mark {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-service-orbit__note {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    max-width: 335px;
+    color: rgba(255, 255, 255, .62);
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+@keyframes liftoraOrbitSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1180px) {
+    .hero-service-orbit__inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .hero-service-orbit__title {
+        max-width: none;
+        min-height: 58px;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .hero-service-orbit__nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-left: 0;
+    }
+
+    .hero-service-orbit__note {
+        max-width: none;
+        justify-self: start;
+        min-height: 58px;
+        padding: 15px 0;
+        border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+}
+
+@media (max-width: 720px) {
+    .hero-service-orbit__nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-service-orbit__link {
+        min-height: 96px;
+        font-size: 12px;
+    }
+
+    .hero-service-orbit__mark {
+        width: 102px;
+        height: 102px;
+    }
+
+    .hero-service-orbit__ring {
+        width: 102px;
+        height: 102px;
+    }
+
+    .hero-service-orbit__mark>svg[data-lucide] {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero-service-orbit__ring text {
+        font-size: 12px;
+    }
+
+    .hero-service-orbit__note {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero-service-orbit__nav {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-service-orbit__link {
+        min-height: 88px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .hero-service-orbit__link:last-child {
+        border-bottom: 0;
+    }
+}
