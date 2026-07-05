@@ -9514,3 +9514,22 @@ main>.hero:first-child {
         border-bottom: 0;
     }
 }
+.hero-service-orbit__note {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    max-width: 335px;
+    margin-left: 28px;
+    padding-left: 26px;
+    color: rgba(255, 255, 255, .62);
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+@media (max-width: 1180px) {
+    .hero-service-orbit__note {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: 0;
+    }
+}
