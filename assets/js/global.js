@@ -3464,18 +3464,15 @@ function initProcessDeck() {
         const deckSwiper = new Swiper(swiperEl, {
             effect: "cards",
             grabCursor: true,
-            speed: 680,
+            speed: 620,
             loop: false,
-            rewind: true,
+            rewind: false,
+            allowTouchMove: true,
             cardsEffect: {
                 slideShadows: false,
                 rotate: false,
-                perSlideOffset: 9,
+                perSlideOffset: 8,
                 perSlideRotate: 0
-            },
-            navigation: {
-                prevEl: prev,
-                nextEl: next
             },
             keyboard: {
                 enabled: true
@@ -3504,9 +3501,29 @@ function initProcessDeck() {
             });
         }
 
+        if (next) {
+            next.addEventListener("click", () => {
+                if (deckSwiper.isEnd) {
+                    deckSwiper.slideTo(0, 620);
+                } else {
+                    deckSwiper.slideNext();
+                }
+            });
+        }
+
+        if (prev) {
+            prev.addEventListener("click", () => {
+                if (deckSwiper.isBeginning) {
+                    deckSwiper.slideTo(deckSwiper.slides.length - 1, 620);
+                } else {
+                    deckSwiper.slidePrev();
+                }
+            });
+        }
+
         steps.forEach((step, index) => {
             step.addEventListener("click", () => {
-                deckSwiper.slideTo(index);
+                deckSwiper.slideTo(index, 620);
             });
         });
     });
