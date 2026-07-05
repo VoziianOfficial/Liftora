@@ -4005,20 +4005,7 @@ h4 {
     transition: transform 460ms var(--ease), opacity 320ms var(--ease);
 }
 
-.btn::after {
-    content: "";
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    bottom: 10px;
-    height: 2px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .24);
-    opacity: .72;
-    transform: scaleX(.34);
-    transform-origin: left;
-    transition: transform var(--transition), background var(--transition), opacity var(--transition);
-}
+
 
 .btn:hover {
     transform: translateY(-2px);
@@ -9462,12 +9449,34 @@ main>.hero:first-child {
 }
 
 @media (max-width: 720px) {
+    .hero-service-orbit__inner {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+    }
+
+    .hero-service-orbit__inner::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hero-service-orbit__title,
+    .hero-service-orbit__note {
+        display: none;
+    }
+
     .hero-service-orbit__nav {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(120px, 1fr);
+        grid-template-columns: none;
+        align-items: stretch;
+        min-width: max-content;
+        border-left: 0;
     }
 
     .hero-service-orbit__link {
         min-height: 96px;
+        min-width: 120px;
         font-size: 12px;
     }
 
@@ -9496,18 +9505,10 @@ main>.hero:first-child {
 }
 
 @media (max-width: 440px) {
-    .hero-service-orbit__nav {
-        grid-template-columns: 1fr;
-    }
-
     .hero-service-orbit__link {
         min-height: 88px;
-        border-right: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, .12);
-    }
-
-    .hero-service-orbit__link:last-child {
-        border-bottom: 0;
+        min-width: 112px;
+        border-right: 1px solid rgba(255, 255, 255, .12);
     }
 }
 
