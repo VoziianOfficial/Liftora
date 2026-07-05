@@ -3448,3 +3448,70 @@
         }
     }
 })();
+
+function initProcessDeck() {
+    const sections = document.querySelectorAll(".process-deck-section");
+
+    sections.forEach((section) => {
+        const swiperEl = section.querySelector(".process-deck__swiper");
+        const steps = section.querySelectorAll(".process-deck__step");
+        const current = section.querySelector(".process-deck__current");
+        const prev = section.querySelector(".process-deck__prev");
+        const next = section.querySelector(".process-deck__next");
+
+        if (!swiperEl || typeof Swiper === "undefined") return;
+
+        const deckSwiper = new Swiper(swiperEl, {
+            effect: "cards",
+            grabCursor: true,
+            speed: 680,
+            loop: false,
+            rewind: true,
+            cardsEffect: {
+                slideShadows: false,
+                rotate: false,
+                perSlideOffset: 9,
+                perSlideRotate: 0
+            },
+            navigation: {
+                prevEl: prev,
+                nextEl: next
+            },
+            keyboard: {
+                enabled: true
+            },
+            on: {
+                init(swiper) {
+                    updateProcessDeck(swiper);
+                },
+                slideChange(swiper) {
+                    updateProcessDeck(swiper);
+                }
+            }
+        });
+
+        function updateProcessDeck(swiper) {
+            const index = swiper.activeIndex;
+
+            if (current) {
+                current.textContent = String(index + 1).padStart(2, "0");
+            }
+
+            steps.forEach((step, stepIndex) => {
+                const isActive = stepIndex === index;
+                step.classList.toggle("is-active", isActive);
+                step.setAttribute("aria-pressed", String(isActive));
+            });
+        }
+
+        steps.forEach((step, index) => {
+            step.addEventListener("click", () => {
+                deckSwiper.slideTo(index);
+            });
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initProcessDeck();
+});
