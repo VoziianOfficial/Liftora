@@ -3489,9 +3489,15 @@ function initProcessDeck() {
 
         function updateProcessDeck(swiper) {
             const index = swiper.activeIndex;
+            const activeSlide = swiper.slides[index];
 
             if (current) {
                 current.textContent = String(index + 1).padStart(2, "0");
+            }
+
+            if (activeSlide && activeSlide.dataset.bg) {
+                const backgroundUrl = new URL(activeSlide.dataset.bg, window.location.href).href;
+                section.style.setProperty("--process-bg", `url("${backgroundUrl}")`);
             }
 
             steps.forEach((step, stepIndex) => {
