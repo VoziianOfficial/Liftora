@@ -3538,3 +3538,36 @@ function initProcessDeck() {
 document.addEventListener("DOMContentLoaded", () => {
     initProcessDeck();
 });
+function initIssueFeatureBoardReveal() {
+    const boards = document.querySelectorAll("[data-issue-board-reveal]");
+
+    if (!boards.length) return;
+
+    boards.forEach((board) => {
+        const section = board.closest(".issue-feature-board");
+
+        if (!section) return;
+
+        if (!("IntersectionObserver" in window)) {
+            section.classList.add("is-visible");
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                section.classList.add("is-visible");
+                observer.disconnect();
+            });
+        }, {
+            threshold: 0.24
+        });
+
+        observer.observe(board);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initIssueFeatureBoardReveal();
+});
